@@ -98,9 +98,8 @@ Pet Health Tracker is an app for keeping our furry friends healthy and happy. Cr
 - All Pets Screen
     * => Add pet screen
     * => Pet detail view
-        * => Add symptom tracker screen
-        * => Add symptom tracker entry screen
-        * => Visualize symptom trends screen
+        * => Add symptom monitoring entry screen
+        * => Visualize symptom trends screen (optional)
 
 
 
