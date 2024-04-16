@@ -107,8 +107,7 @@ Pet Health Tracker is an app for keeping our furry friends healthy and happy. Cr
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![wireframe](wireframe.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
 
