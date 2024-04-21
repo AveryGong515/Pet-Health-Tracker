@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C17A243C2BD40814008AEE7C /* PetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243B2BD40814008AEE7C /* PetListViewController.swift */; };
+		C17A243E2BD4083C008AEE7C /* PetComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243D2BD4083C008AEE7C /* PetComposeViewController.swift */; };
+		C17A24402BD408B4008AEE7C /* PetProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243F2BD408B4008AEE7C /* PetProfileViewController.swift */; };
+		C17A24422BD408DF008AEE7C /* SymptomsComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24412BD408DF008AEE7C /* SymptomsComposeViewController.swift */; };
+		C17A24442BD40935008AEE7C /* SymptomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24432BD40935008AEE7C /* SymptomListViewController.swift */; };
+		C17A24462BD40A7C008AEE7C /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24452BD40A7C008AEE7C /* Pet.swift */; };
+		C17A244A2BD4121C008AEE7C /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24492BD4121C008AEE7C /* PetCell.swift */; };
+		C1AD48E12BCF593900A9E31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD48E02BCF593900A9E31D /* AppDelegate.swift */; };
+		C1AD48E32BCF593900A9E31D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD48E22BCF593900A9E31D /* SceneDelegate.swift */; };
+		C1AD48E52BCF593900A9E31D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD48E42BCF593900A9E31D /* ViewController.swift */; };
+		C1AD48E82BCF593900A9E31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1AD48E62BCF593900A9E31D /* Main.storyboard */; };
+		C1AD48EA2BCF593C00A9E31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1AD48E92BCF593C00A9E31D /* Assets.xcassets */; };
+		C1AD48ED2BCF593C00A9E31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1AD48EB2BCF593C00A9E31D /* LaunchScreen.storyboard */; };
+		C1AD48F72BCF616100A9E31D /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD48F62BCF616100A9E31D /* ReminderCell.swift */; };
+		C1D703362BD34C2F00FC86F4 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D703352BD34C2F00FC86F4 /* Reminder.swift */; };
+		C1D7033A2BD354CC00FC86F4 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D703392BD354CC00FC86F4 /* ReminderListViewController.swift */; };
+		C1D7033C2BD3550C00FC86F4 /* ReminderComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D7033B2BD3550C00FC86F4 /* ReminderComposeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C17A243B2BD40814008AEE7C /* PetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListViewController.swift; sourceTree = "<group>"; };
+		C17A243D2BD4083C008AEE7C /* PetComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetComposeViewController.swift; sourceTree = "<group>"; };
+		C17A243F2BD408B4008AEE7C /* PetProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileViewController.swift; sourceTree = "<group>"; };
+		C17A24412BD408DF008AEE7C /* SymptomsComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsComposeViewController.swift; sourceTree = "<group>"; };
+		C17A24432BD40935008AEE7C /* SymptomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomListViewController.swift; sourceTree = "<group>"; };
+		C17A24452BD40A7C008AEE7C /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		C17A24492BD4121C008AEE7C /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
+		C1AD48DD2BCF593900A9E31D /* Pet Health Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet Health Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1AD48E02BCF593900A9E31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1AD48E22BCF593900A9E31D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C1AD48E42BCF593900A9E31D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1AD48E72BCF593900A9E31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1AD48E92BCF593C00A9E31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1AD48EC2BCF593C00A9E31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1AD48EE2BCF593C00A9E31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1AD48F62BCF616100A9E31D /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
+		C1D703352BD34C2F00FC86F4 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		C1D703392BD354CC00FC86F4 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
+		C1D7033B2BD3550C00FC86F4 /* ReminderComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderComposeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1AD48DA2BCF593900A9E31D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1AD48D42BCF593900A9E31D = {
+			isa = PBXGroup;
+			children = (
+				C1AD48DF2BCF593900A9E31D /* Pet Health Tracker */,
+				C1AD48DE2BCF593900A9E31D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1AD48DE2BCF593900A9E31D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1AD48DD2BCF593900A9E31D /* Pet Health Tracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1AD48DF2BCF593900A9E31D /* Pet Health Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				C1AD48E02BCF593900A9E31D /* AppDelegate.swift */,
+				C1AD48E22BCF593900A9E31D /* SceneDelegate.swift */,
+				C1AD48E42BCF593900A9E31D /* ViewController.swift */,
+				C1AD48E62BCF593900A9E31D /* Main.storyboard */,
+				C17A24432BD40935008AEE7C /* SymptomListViewController.swift */,
+				C17A24412BD408DF008AEE7C /* SymptomsComposeViewController.swift */,
+				C17A243F2BD408B4008AEE7C /* PetProfileViewController.swift */,
+				C17A243D2BD4083C008AEE7C /* PetComposeViewController.swift */,
+				C17A243B2BD40814008AEE7C /* PetListViewController.swift */,
+				C17A24452BD40A7C008AEE7C /* Pet.swift */,
+				C1D703392BD354CC00FC86F4 /* ReminderListViewController.swift */,
+				C1D7033B2BD3550C00FC86F4 /* ReminderComposeViewController.swift */,
+				C1AD48F62BCF616100A9E31D /* ReminderCell.swift */,
+				C17A24492BD4121C008AEE7C /* PetCell.swift */,
+				C1D703352BD34C2F00FC86F4 /* Reminder.swift */,
+				C1AD48E92BCF593C00A9E31D /* Assets.xcassets */,
+				C1AD48EB2BCF593C00A9E31D /* LaunchScreen.storyboard */,
+				C1AD48EE2BCF593C00A9E31D /* Info.plist */,
+			);
+			path = "Pet Health Tracker";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1AD48DC2BCF593900A9E31D /* Pet Health Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1AD48F12BCF593C00A9E31D /* Build configuration list for PBXNativeTarget "Pet Health Tracker" */;
+			buildPhases = (
+				C1AD48D92BCF593900A9E31D /* Sources */,
+				C1AD48DA2BCF593900A9E31D /* Frameworks */,
+				C1AD48DB2BCF593900A9E31D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pet Health Tracker";
+			productName = "Pet Health Tracker";
+			productReference = C1AD48DD2BCF593900A9E31D /* Pet Health Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1AD48D52BCF593900A9E31D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					C1AD48DC2BCF593900A9E31D = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = C1AD48D82BCF593900A9E31D /* Build configuration list for PBXProject "Pet Health Tracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1AD48D42BCF593900A9E31D;
+			productRefGroup = C1AD48DE2BCF593900A9E31D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1AD48DC2BCF593900A9E31D /* Pet Health Tracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1AD48DB2BCF593900A9E31D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1AD48ED2BCF593C00A9E31D /* LaunchScreen.storyboard in Resources */,
+				C1AD48EA2BCF593C00A9E31D /* Assets.xcassets in Resources */,
+				C1AD48E82BCF593900A9E31D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1AD48D92BCF593900A9E31D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1AD48E52BCF593900A9E31D /* ViewController.swift in Sources */,
+				C1D7033C2BD3550C00FC86F4 /* ReminderComposeViewController.swift in Sources */,
+				C17A243C2BD40814008AEE7C /* PetListViewController.swift in Sources */,
+				C1D7033A2BD354CC00FC86F4 /* ReminderListViewController.swift in Sources */,
+				C1AD48E12BCF593900A9E31D /* AppDelegate.swift in Sources */,
+				C1AD48E32BCF593900A9E31D /* SceneDelegate.swift in Sources */,
+				C17A24402BD408B4008AEE7C /* PetProfileViewController.swift in Sources */,
+				C1D703362BD34C2F00FC86F4 /* Reminder.swift in Sources */,
+				C17A24422BD408DF008AEE7C /* SymptomsComposeViewController.swift in Sources */,
+				C17A243E2BD4083C008AEE7C /* PetComposeViewController.swift in Sources */,
+				C17A24442BD40935008AEE7C /* SymptomListViewController.swift in Sources */,
+				C17A244A2BD4121C008AEE7C /* PetCell.swift in Sources */,
+				C17A24462BD40A7C008AEE7C /* Pet.swift in Sources */,
+				C1AD48F72BCF616100A9E31D /* ReminderCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C1AD48E62BCF593900A9E31D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1AD48E72BCF593900A9E31D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C1AD48EB2BCF593C00A9E31D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1AD48EC2BCF593C00A9E31D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1AD48EF2BCF593C00A9E31D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1AD48F02BCF593C00A9E31D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1AD48F22BCF593C00A9E31D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A43LQ3G89G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pet Health Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "noname.Pet-Health-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1AD48F32BCF593C00A9E31D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A43LQ3G89G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pet Health Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "noname.Pet-Health-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1AD48D82BCF593900A9E31D /* Build configuration list for PBXProject "Pet Health Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1AD48EF2BCF593C00A9E31D /* Debug */,
+				C1AD48F02BCF593C00A9E31D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1AD48F12BCF593C00A9E31D /* Build configuration list for PBXNativeTarget "Pet Health Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1AD48F22BCF593C00A9E31D /* Debug */,
+				C1AD48F32BCF593C00A9E31D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1AD48D52BCF593900A9E31D /* Project object */;
+}

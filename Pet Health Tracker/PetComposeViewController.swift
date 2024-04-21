@@ -1,0 +1,110 @@
+//
+//  PetComposeViewController.swift
+//  Pet Health Tracker
+//
+//  Created by Avery Gong on 2024-04-20.
+//
+
+import UIKit
+
+class PetComposeViewController: UIViewController {
+    
+    
+    @IBOutlet weak var profilePicture: UIButton!
+    
+    @IBOutlet weak var nameField: UITextField!
+    
+    @IBOutlet weak var speciesField: UITextField!
+    
+    @IBOutlet weak var breedField: UITextField!
+    
+    @IBOutlet weak var sexToggle: UISegmentedControl!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var weightField: UITextField!
+    
+    @IBOutlet weak var isFixedToggle: UISegmentedControl!
+    @IBOutlet weak var medicalConditionsField: UITextField!
+    
+    // define a closure to pass the newly created Pet around, so that it could be used by PetListViewController
+    var onComposePet: ((Pet) -> Void)? = nil
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func didTapSavePet(_ sender: Any) {
+        // TODO: check if the required fields as filled out
+        //1. Ensure required fields are filled out
+        guard let name = nameField.text, let species = speciesField.text, !name.isEmpty, !species.isEmpty else {
+            presentAlert(title: "Unable to Save", message: "Please fill out all required fields.")
+            return
+        }
+        //TODO: figure out how to format weight properly
+        let newPet = Pet(name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "Unknown Species", breed: breedField.text ?? "Unknown Breed", sex: getSelectedSex(), fixed: getSelectedFixed(), weight: 15.0, medicalConditions: getEnteredMedicalConditions())
+
+        onComposePet?(newPet)
+        dismiss(animated: true)
+        
+        
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+//        if segue.identifier == "saveNewPetSegue" {
+//            
+//            if let petListViewController = segue.destination as? PetListViewController {
+//                print(weightField.text ?? "nothing")
+//                
+//                let newPet = Pet(name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "unknown species", breed: breedField.text ?? "unknown breed", sex: getSelectedSex(), fixed: getSelectedFixed(), weight: 15.0, medicalConditions: getEnteredMedicalConditions())
+//                petListViewController.petList.append(newPet)
+//            }
+//        }
+//    }
+    
+    
+    func formatDate(_ date: Date)->String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: date)
+    }
+    
+    
+    func getSelectedSex()->String {
+        if sexToggle.selectedSegmentIndex == 0 {
+            return "Male"
+        }
+        return "Female"
+    }
+    
+    func getSelectedFixed()->Bool{
+        if isFixedToggle.selectedSegmentIndex == 0 {
+            return true
+        }
+        return false
+        
+    }
+    
+    func getEnteredMedicalConditions()->[String]{
+        return medicalConditionsField.text?.components(separatedBy: ",") ?? []
+        
+    }
+    private func presentAlert(title: String, message: String) {
+        // 1.
+        let alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        // 2.
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        // 3.
+        alertController.addAction(okAction)
+        // 4.
+        present(alertController, animated: true)
+    }
+}
