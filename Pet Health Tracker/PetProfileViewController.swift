@@ -60,19 +60,17 @@ class PetProfileViewController: UIViewController {
     func calculateAge(birthDate: Date) -> String {
         let calendar = Calendar.current
         let currentDate = Date()
-        
-        let dateInterval = DateInterval(start: birthDate, end: currentDate)
-        let ageComponents = calendar.dateComponents([.year, .month], from: birthDate, to: currentDate)
+//        
+//        let dateInterval = DateInterval(start: birthDate, end: currentDate)
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthDate, to: currentDate)
             let years = ageComponents.year ?? 0
             let months = ageComponents.month ?? 0
+            let days = ageComponents.day ?? 0
             
-            if years == 0 {
-                return "Age: \(months) mo"
-            } else if months == 0 {
-                return "Age: \(years) yr"
-            } else {
-                return "Age: \(years) yr, \(months) mo"
-            }
+        if years == 0 && months == 0 && days == 0{
+            return "Newborn :)"
+        }
+        return "Age: \(years) yr, \(months) mo, \(days) d"
         
     
     }

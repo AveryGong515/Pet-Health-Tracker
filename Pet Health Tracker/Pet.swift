@@ -72,6 +72,14 @@ extension Pet {
         Pet.save(pets, forKey: Pet.petsKey)
     }
     
+    static func deletePet(_ pet: Pet) {
+            var pets = Pet.getPets()
+            if let index = pets.firstIndex(where: { $0.name == pet.name }) {
+                pets.remove(at: index)
+                save(pets, forKey: petsKey)
+            }
+        }
+    
 }
 
 

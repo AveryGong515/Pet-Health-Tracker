@@ -46,8 +46,19 @@ class PetComposeViewController: UIViewController {
             presentAlert(title: "Unable to Save", message: "Please fill out all required fields.")
             return
         }
+        var breed: String
+
+        if let text = breedField.text, !text.isEmpty {
+            breed = text
+        } else {
+            breed = "Unspecified Breed"
+        }
+    
+        
+        
+            
         //TODO: figure out how to format weight properly
-        let newPet = Pet(name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "Unknown Species", breed: breedField.text ?? "Unknown Breed", sex: getSelectedSex(), fixed: getSelectedFixed(), weight: 15.0, medicalConditions: getEnteredMedicalConditions())
+        let newPet = Pet(name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "Unspecied Species", breed: breed, sex: getSelectedSex(), fixed: getSelectedFixed(), weight: 15.0, medicalConditions: getEnteredMedicalConditions())
 
         onComposePet?(newPet)
         dismiss(animated: true)

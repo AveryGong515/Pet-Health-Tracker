@@ -45,6 +45,21 @@ class PetListViewController: UIViewController, UITableViewDataSource, UITableVie
         refreshPets()
     }
     
+    // add swipe to delete
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let petRemoved = petList[indexPath.row]
+            Pet.deletePet(petRemoved)
+            refreshPets()
+
+            
+            
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+            print("not yet handled")
+        }
+    }
+    
     
     
 //    @IBAction func didTapAddNewPet(_ sender: Any) {
