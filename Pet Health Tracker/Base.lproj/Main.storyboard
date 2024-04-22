@@ -980,14 +980,13 @@
                                             <color key="tintColor" systemColor="systemRedColor"/>
                                             <connections>
                                                 <action selector="didTapCancelButton:" destination="Gr1-IL-bui" id="oBk-VF-6AM"/>
-                                                <segue destination="gHh-c6-46W" kind="unwind" unwindAction="unwindToPetProfile:" id="bFv-Ly-jlR"/>
+                                                <segue destination="gHh-c6-46W" kind="unwind" identifier="unwindToPetProfile" unwindAction="unwindToPetProfile:" id="bFv-Ly-jlR"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="ygZ-Rc-jW3">
                                             <color key="tintColor" red="0.45092743899999999" green="0.5820027968" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <connections>
                                                 <action selector="didTapSaveButton:" destination="Gr1-IL-bui" id="V15-eE-KmM"/>
-                                                <segue destination="gHh-c6-46W" kind="unwind" unwindAction="unwindToPetProfile:" id="FAP-gf-rxO"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1194,11 +1193,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="90" id="zJe-qS-hdB">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="105" id="zJe-qS-hdB" customClass="LogEntryCell" customModule="Pet_Health_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zJe-qS-hdB" id="CfO-uq-788">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-5b-9VM">
@@ -1218,6 +1217,10 @@
                                             </subviews>
                                             <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateTime" destination="r8J-EC-HNZ" id="z9E-58-d8y"/>
+                                            <outlet property="title" destination="fAc-5b-9VM" id="CCP-Fh-Hie"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1233,7 +1236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7s-63-aLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2213" y="2103"/>
+            <point key="canvasLocation" x="2212.9770992366412" y="2102.816901408451"/>
         </scene>
     </scenes>
     <resources>

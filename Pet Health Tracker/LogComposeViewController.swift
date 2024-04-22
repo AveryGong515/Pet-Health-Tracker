@@ -13,6 +13,7 @@ class LogComposeViewController: UIViewController {
     var logType: String!
     var isNewSymptom: Bool?
     var severitySelected: String?
+    var existingSymptomSelected: String?
     
     
     
@@ -37,23 +38,25 @@ class LogComposeViewController: UIViewController {
     
     
     @IBAction func didTapSaveButton(_ sender: Any) {
+        print("here0")
         // check if (either new symptom is added OR selected symptom) AND severity is selected
         if let newSymptomText = newSymptom.text, let severity = severitySelected, !newSymptomText.isEmpty{
             // case 1: new symptom added AND severity selected
-            
+//            print("here1")
             let newLog = LogEntry(id: UUID().uuidString, logTitle: newSymptomText, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "")
             pet.symptomLogNames.append(newSymptomText.lowercased())
             pet.save()
             
             //refresh menu
             selectSymptom.menu = setSymptomNameMenuOptions()
-            dismiss(animated: true)
+            performSegue(withIdentifier: "unwindToPetProfile", sender: nil)
         }
-        else if let symptomNameLabel = selectSymptom.titleLabel, let severity = severitySelected, let symptomName = symptomNameLabel.text {
+        if let symptomName = existingSymptomSelected, let severity = severitySelected {
+//            print("here2,\(symptomName)")
             // case 2: existing symptom AND severity selected
             let newLog = LogEntry(id: UUID().uuidString, logTitle: symptomName, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "")
-            dismiss(animated: true)
-//            performSegue(withIdentifier: "unwindToPetProfile", sender: nil)
+//            dismiss(animated: true)
+            performSegue(withIdentifier: "unwindToPetProfile", sender: nil)
         }
         else {
             presentAlert(title: "Unable to save log", message: "Please ensure to select a symptom and severity!")
@@ -128,6 +131,7 @@ class LogComposeViewController: UIViewController {
         newSymptom.isHidden = true
         isNewSymptom = false
         selectSymptom.setTitle(action.title, for: .normal)
+        existingSymptomSelected = action.title
 //        symptomSelectedOrAdded = action.title
     }
     

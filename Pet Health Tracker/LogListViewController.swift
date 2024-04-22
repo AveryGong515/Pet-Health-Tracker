@@ -7,16 +7,23 @@
 
 import UIKit
 
-class LogListViewController: UIViewController {
+class LogListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    
 
     
     var pet: Pet!
+    
     @IBOutlet weak var symptomListTableView: UITableView!
     
     @IBOutlet weak var navigationBar: UINavigationItem!
     
+    var symptomLogEntries = [LogEntry]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        symptomListTableView.delegate = self
+        symptomListTableView.dataSource = self
         
         configure()
         
@@ -33,6 +40,15 @@ class LogListViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return symptomLogEntries.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LogEntryCell", for: indexPath) as! LogEntryCell
+        let log = symptomLogEntries[indexPath.row]
+        return cell
+    }
     /*
     // MARK: - Navigation
 

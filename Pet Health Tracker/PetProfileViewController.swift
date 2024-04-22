@@ -21,6 +21,7 @@ class PetProfileViewController: UIViewController {
     @IBOutlet weak var medicalConditionsLabel: UITextField!
     @IBOutlet weak var birthDateLabel: UITextField!
     @IBOutlet weak var profilePicture: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configure(pet: pet)
@@ -96,7 +97,9 @@ class PetProfileViewController: UIViewController {
             
             guard let chooseLogTypeViewController = segue.destination as? ChooseLogTypeViewController else {print("destination ChooseLogTypeViewController is nil");return}
             chooseLogTypeViewController.pet = pet
+            print(chooseLogTypeViewController.pet.symptomLogNames)
             chooseLogTypeViewController.modalPresentationStyle = .fullScreen
+            
         }
         
 //        if segue.identifier == "ViewAllLogsSegue"{
