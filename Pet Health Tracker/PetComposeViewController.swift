@@ -112,9 +112,15 @@ class PetComposeViewController: UIViewController {
     }
     
     func getEnteredMedicalConditions()->[String]{
-        return medicalConditionsField.text?.components(separatedBy: ",") ?? []
-        
+        if let medicalConditions = medicalConditionsField.text{
+            if !medicalConditions.isEmpty{
+                return medicalConditions.components(separatedBy: ",")
+            }
+        }
+        return []
     }
+        
+    
     private func presentAlert(title: String, message: String) {
         // 1.
         let alertController = UIAlertController(

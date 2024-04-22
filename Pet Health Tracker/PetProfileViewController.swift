@@ -23,7 +23,6 @@ class PetProfileViewController: UIViewController {
     @IBOutlet weak var profilePicture: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(pet.name)
         self.configure(pet: pet)
 
         // Do any additional setup after loading the view.
@@ -50,7 +49,8 @@ class PetProfileViewController: UIViewController {
         else{
             weightLabel.text = "Weight: Not Entered"
         }
-        if pet.medicalConditions.count > 0{
+        print("\(pet.name)'s medical conditions: \(pet.medicalConditions)")
+        if !pet.medicalConditions.isEmpty{
             medicalConditionsLabel.text = "Medical Conditions: \(pet.medicalConditions.joined(separator: ", "))"
         }
         else {

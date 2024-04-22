@@ -35,11 +35,11 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderCell" rowHeight="88" id="S3X-ry-DHh" customClass="ReminderCell" customModule="Pet_Health_Tracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="88"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderCell" rowHeight="108" id="S3X-ry-DHh" customClass="ReminderCell" customModule="Pet_Health_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S3X-ry-DHh" id="PtR-iI-syq">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsp-rc-aZa">
@@ -58,7 +58,7 @@
                                                     <color key="highlightedColor" systemColor="lightTextColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-MF-RF9">
-                                                    <rect key="frame" x="28" y="33" width="86" height="22"/>
+                                                    <rect key="frame" x="28" y="33" width="86" height="42"/>
                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                     <color key="textColor" red="0.4509274389786736" green="0.58200279678652411" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -106,6 +106,13 @@
                                                         <action selector="didTapDeactivateReminderButton:" destination="S3X-ry-DHh" eventType="touchUpInside" id="iaz-6v-pZI"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="in date time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIU-zl-bO3">
+                                                    <rect key="frame" x="129" y="78" width="157" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.67805774006622521" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="t90-Jw-FkQ" firstAttribute="top" secondItem="PtR-iI-syq" secondAttribute="topMargin" constant="6" id="EJH-U5-rod"/>
@@ -123,6 +130,7 @@
                                             <outlet property="isActiveToggle" destination="EAw-pe-JKb" id="zsy-fR-49l"/>
                                             <outlet property="petName" destination="BiE-MF-RF9" id="FbK-4H-VaA"/>
                                             <outlet property="reminderName" destination="t90-Jw-FkQ" id="0T7-8r-kvu"/>
+                                            <outlet property="timeUntil" destination="LIU-zl-bO3" id="si4-Rt-nfJ"/>
                                             <segue destination="42f-Ec-cNs" kind="show" identifier="ViewReminderDetailSegue" id="P3Z-7b-kTX"/>
                                         </connections>
                                     </tableViewCell>
@@ -160,15 +168,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjc-X2-vwY">
-                                <rect key="frame" x="135.33333333333334" y="128" width="122.66666666666666" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjc-X2-vwY">
+                                <rect key="frame" x="47" y="123" width="300" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="twM-q3-Sbn"/>
+                                    <constraint firstAttribute="height" constant="36" id="MRE-2l-mxI"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Reminder Title">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AmericanTypewriter-Semibold"/>
+                                            <font key="NSFont" size="20" name="AmericanTypewriter-Semibold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -195,7 +203,15 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hla-Y0-XxR">
                                 <rect key="frame" x="29" y="255" width="335" height="152"/>
                                 <color key="backgroundColor" red="0.9529411793" green="0.9529411793" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <attributedString key="attributedText"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="description">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="AmericanTypewriter"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder DateTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kew-m8-83V">
@@ -223,16 +239,17 @@
                         <constraints>
                             <constraint firstItem="ypp-nT-xUn" firstAttribute="leading" secondItem="koZ-8o-J10" secondAttribute="leading" constant="29" id="5Uy-91-phS"/>
                             <constraint firstItem="qJV-63-GMy" firstAttribute="centerX" secondItem="hla-Y0-XxR" secondAttribute="centerX" id="77l-yL-qVw"/>
-                            <constraint firstItem="Kew-m8-83V" firstAttribute="top" secondItem="pjc-X2-vwY" secondAttribute="bottom" constant="11" id="AnU-Jp-Zre"/>
+                            <constraint firstItem="pjc-X2-vwY" firstAttribute="centerX" secondItem="Kew-m8-83V" secondAttribute="centerX" id="N87-H7-eP5"/>
                             <constraint firstItem="qJV-63-GMy" firstAttribute="leading" secondItem="koZ-8o-J10" secondAttribute="leading" id="OvM-RN-Fl8"/>
                             <constraint firstItem="hla-Y0-XxR" firstAttribute="top" secondItem="ypp-nT-xUn" secondAttribute="bottom" constant="4" id="P1W-eF-Dtx"/>
-                            <constraint firstItem="Kew-m8-83V" firstAttribute="centerX" secondItem="pjc-X2-vwY" secondAttribute="centerX" id="TmE-X1-9HV"/>
                             <constraint firstItem="koZ-8o-J10" firstAttribute="bottom" secondItem="hla-Y0-XxR" secondAttribute="bottom" constant="313" id="UW7-4k-L3m"/>
+                            <constraint firstItem="pjc-X2-vwY" firstAttribute="top" secondItem="qJV-63-GMy" secondAttribute="bottom" constant="14" id="eh9-DC-nca"/>
                             <constraint firstItem="ypp-nT-xUn" firstAttribute="leading" secondItem="hla-Y0-XxR" secondAttribute="leading" id="gEZ-Q1-fYf"/>
+                            <constraint firstItem="pjc-X2-vwY" firstAttribute="centerX" secondItem="qJV-63-GMy" secondAttribute="centerX" id="gXq-6Z-XPJ"/>
                             <constraint firstItem="hla-Y0-XxR" firstAttribute="top" secondItem="Kew-m8-83V" secondAttribute="bottom" constant="70" id="jbP-3P-sQx"/>
-                            <constraint firstItem="qJV-63-GMy" firstAttribute="centerX" secondItem="pjc-X2-vwY" secondAttribute="centerX" id="lDc-3d-bwE"/>
-                            <constraint firstItem="pjc-X2-vwY" firstAttribute="top" secondItem="qJV-63-GMy" secondAttribute="bottom" constant="19" id="pEd-ka-xb6"/>
+                            <constraint firstItem="Kew-m8-83V" firstAttribute="top" secondItem="pjc-X2-vwY" secondAttribute="bottom" constant="8" id="n3D-fi-G19"/>
                             <constraint firstItem="qJV-63-GMy" firstAttribute="centerX" secondItem="MhF-8j-wmp" secondAttribute="centerX" id="tnv-QN-EMi"/>
+                            <constraint firstItem="pjc-X2-vwY" firstAttribute="leading" secondItem="koZ-8o-J10" secondAttribute="leading" constant="47" id="veI-hR-H22"/>
                             <constraint firstItem="qJV-63-GMy" firstAttribute="top" secondItem="koZ-8o-J10" secondAttribute="top" id="xK7-xt-Q5E"/>
                         </constraints>
                     </view>
@@ -687,7 +704,7 @@
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="Mpa-pV-SY5">
-                                <rect key="frame" x="0.0" y="37" width="392" height="257"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="294"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pawprint.circle.fill" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7E-2v-WQ3">
