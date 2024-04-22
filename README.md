@@ -32,15 +32,15 @@ Pet Health Tracker is an app for keeping our furry friends healthy and happy. Cr
 
 **Required Must-have Stories**
 
-* User can login/sign up/log out
-* User can add a new pet
-* Yser can remove an existing pet
-* User can update pet profile, with ability to upload a profile picture
-* User can create events or reminders for pets
-* User can view upcoming events or reminders on the dashboard
-* User can view details of upcoming events or reminders
-* User can create symptom watch trackers
-* User can create symptom watch tracker entries to log daily pet symptoms
+[] User can login/sign up/log out
+[x] User can add a new pet
+[x] Yser can remove an existing pet
+[] User can update pet profile, with ability to upload a profile picture
+[x] User can create events or reminders for pets
+[x] User can view upcoming events or reminders on the dashboard
+[x] User can view details of upcoming events or reminders
+[] User can create symptom watch trackers
+[] User can create symptom watch tracker entries to log daily pet symptoms
 
 
 **Optional Nice-to-have Stories**
