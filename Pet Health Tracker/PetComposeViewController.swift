@@ -33,6 +33,9 @@ class PetComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        weightField.keyboardType = .numberPad
+        // disables any future date selection for birthDate
+        datePicker.maximumDate = Date()
         
         
         // Do any additional setup after loading the view.
@@ -54,11 +57,18 @@ class PetComposeViewController: UIViewController {
             breed = "Unspecified Breed"
         }
     
+        guard let weightEnteredString = weightField.text else {return}
+        var weightEntered: Float?
+        if !weightEnteredString.isEmpty{
+            weightEntered = Float(weightEnteredString)
+        }
+        else {
+            weightEntered = nil
+        }
         
         
             
-        //TODO: figure out how to format weight properly
-        let newPet = Pet(name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "Unspecied Species", breed: breed, sex: getSelectedSex(), fixed: getSelectedFixed(), weight: 15.0, medicalConditions: getEnteredMedicalConditions())
+        let newPet = Pet(name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "Unspecied Species", breed: breed, sex: getSelectedSex(), fixed: getSelectedFixed(), weight: weightEntered, medicalConditions: getEnteredMedicalConditions())
 
         onComposePet?(newPet)
         dismiss(animated: true)

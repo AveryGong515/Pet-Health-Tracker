@@ -12,22 +12,27 @@ class ReminderListViewController: UIViewController, UITableViewDataSource, UITab
     
 
     @IBOutlet weak var tableView: UITableView!
+    
     var reminders = [Reminder]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
         tableView.tableHeaderView = UIView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 100
+        refreshReminders()
+        
+        
     }
     
     
     
     
-    @IBAction func didTapNewReminderButton(_ sender: Any) {
-        performSegue(withIdentifier: "ComposeSegue", sender: nil)
-    }
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reminders.count
@@ -36,9 +41,58 @@ class ReminderListViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath) as! ReminderCell
         let reminder = reminders[indexPath.row]
+        cell.petName.text = reminder.pet.name
+        cell.dateTime.text = Utils.formatDateTimetoString(date: reminder.dateTime)
+        cell.reminderName.text = reminder.title
+//        cell.isActiveToggle.isOn = reminder.isActive
         // implement cell.configure later
         return cell
     }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewReminderDetailSegue"{
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {return}
+            let selectedReminder = reminders[selectedIndexPath.row]
+            guard let reminderDetailViewController = segue.destination as? ReminderDetailViewController else {return}
+            reminderDetailViewController.reminder = selectedReminder
+                    
+                
+            }
+        
+        if segue.identifier == "ComposeReminderSegue"{
+            if let reminderComposeViewController = segue.destination as? ReminderComposeViewController {
+                reminderComposeViewController.onComposeReminder = { [weak self] reminder in
+                    reminder.save()
+                    self?.refreshReminders()
+                    
+                }
+            }
+        }
+        else {
+            print("bad request")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Deselect the row after tapping
+        tableView.deselectRow(at: indexPath, animated: true)
+    
+    }
+    
+    func refreshReminders(){
+        var reminders = Reminder.getReminders()
+        for reminder in reminders{
+            print(reminder.title, reminder.pet.name)
+        }
+//
+        // 2.
+        self.reminders = reminders
+//
+        tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+    }
+}
     
 
     /*
@@ -51,4 +105,4 @@ class ReminderListViewController: UIViewController, UITableViewDataSource, UITab
     }
     */
 
-}
+

@@ -23,22 +23,12 @@ class PetListViewController: UIViewController, UITableViewDataSource, UITableVie
         petListTableView.rowHeight = 150
         petListTableView.dataSource = self
         petListTableView.delegate = self
-//        fetchPets()
         
 
         // Do any additional setup after loading the view.
     }
     
-    func fetchPets()->Void {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let birthDate1 = dateFormatter.date(from: "2018-11-02")!
-        let birthDate2 = dateFormatter.date(from: "2021-09-13")!
-        let Pet1 = Pet(name: "Oscar", birthDate: birthDate1, species:"Feline", breed: "Domestic Shorthair", sex: "Male", fixed: true, weight: 15.0, medicalConditions:["IBD", "ginginvitis"], profilePicture: nil)
-        let Pet2 = Pet(name: "Emily", birthDate: birthDate2, species:"Canine", breed: "Bichon Frise", sex: "Female", fixed: true, weight: 17.0, medicalConditions: [], profilePicture:nil)
-        petList.append(Pet1)
-        petList.append(Pet2)
-    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

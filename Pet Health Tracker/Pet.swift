@@ -15,9 +15,11 @@ struct Pet: Codable{
     var breed: String
     var sex: String
     var fixed: Bool
-    var weight: Float
+    var weight: Float?
     var medicalConditions: [String]
     var profilePicture: URL?
+    
+    
     
 }
 
@@ -32,7 +34,8 @@ extension Pet {
     static func save(_ pets: [Pet], forKey key: String) {
 
         // TODO: Save the array of tasks
-        let defaults = UserDefaults.standard
+//        let defaults = UserDefaults.standard
+        let defaults = Utils.defaults
         let encodedData = try! JSONEncoder().encode(pets)
         defaults.set(encodedData, forKey: key)
         
@@ -51,7 +54,8 @@ extension Pet {
                 return []
             }
         }
-
+    
+    
     
 
     // Add a new task or update an existing task with the current task.
@@ -72,13 +76,29 @@ extension Pet {
         Pet.save(pets, forKey: Pet.petsKey)
     }
     
+    static func getPet(_ name: String)->Pet?{
+        let pets = Pet.getPets()
+        if let index = pets.firstIndex(where: { $0.name == name }) {
+            return pets[index]
+        }
+        return nil
+        
+    }
+    
+    
     static func deletePet(_ pet: Pet) {
+        
             var pets = Pet.getPets()
             if let index = pets.firstIndex(where: { $0.name == pet.name }) {
                 pets.remove(at: index)
                 save(pets, forKey: petsKey)
             }
         }
+    
+    static func updatePetInfo(pet: inout Pet, newWeight: Float){
+        pet.weight = newWeight
+        
+    }
     
 }
 

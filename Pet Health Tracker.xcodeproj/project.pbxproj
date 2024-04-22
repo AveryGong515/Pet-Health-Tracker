@@ -14,6 +14,8 @@
 		C17A24442BD40935008AEE7C /* SymptomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24432BD40935008AEE7C /* SymptomListViewController.swift */; };
 		C17A24462BD40A7C008AEE7C /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24452BD40A7C008AEE7C /* Pet.swift */; };
 		C17A244A2BD4121C008AEE7C /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24492BD4121C008AEE7C /* PetCell.swift */; };
+		C17A244C2BD5E204008AEE7C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A244B2BD5E204008AEE7C /* Utils.swift */; };
+		C17A244E2BD5FA81008AEE7C /* ReminderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A244D2BD5FA81008AEE7C /* ReminderDetailViewController.swift */; };
 		C1AD48E12BCF593900A9E31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD48E02BCF593900A9E31D /* AppDelegate.swift */; };
 		C1AD48E32BCF593900A9E31D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD48E22BCF593900A9E31D /* SceneDelegate.swift */; };
 		C1AD48E52BCF593900A9E31D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD48E42BCF593900A9E31D /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 		C17A24432BD40935008AEE7C /* SymptomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomListViewController.swift; sourceTree = "<group>"; };
 		C17A24452BD40A7C008AEE7C /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		C17A24492BD4121C008AEE7C /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
+		C17A244B2BD5E204008AEE7C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C17A244D2BD5FA81008AEE7C /* ReminderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailViewController.swift; sourceTree = "<group>"; };
 		C1AD48DD2BCF593900A9E31D /* Pet Health Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet Health Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AD48E02BCF593900A9E31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1AD48E22BCF593900A9E31D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				C17A243B2BD40814008AEE7C /* PetListViewController.swift */,
 				C17A24452BD40A7C008AEE7C /* Pet.swift */,
 				C1D703392BD354CC00FC86F4 /* ReminderListViewController.swift */,
+				C17A244D2BD5FA81008AEE7C /* ReminderDetailViewController.swift */,
+				C17A244B2BD5E204008AEE7C /* Utils.swift */,
 				C1D7033B2BD3550C00FC86F4 /* ReminderComposeViewController.swift */,
 				C1AD48F62BCF616100A9E31D /* ReminderCell.swift */,
 				C17A24492BD4121C008AEE7C /* PetCell.swift */,
@@ -176,9 +182,11 @@
 				C17A243C2BD40814008AEE7C /* PetListViewController.swift in Sources */,
 				C1D7033A2BD354CC00FC86F4 /* ReminderListViewController.swift in Sources */,
 				C1AD48E12BCF593900A9E31D /* AppDelegate.swift in Sources */,
+				C17A244C2BD5E204008AEE7C /* Utils.swift in Sources */,
 				C1AD48E32BCF593900A9E31D /* SceneDelegate.swift in Sources */,
 				C17A24402BD408B4008AEE7C /* PetProfileViewController.swift in Sources */,
 				C1D703362BD34C2F00FC86F4 /* Reminder.swift in Sources */,
+				C17A244E2BD5FA81008AEE7C /* ReminderDetailViewController.swift in Sources */,
 				C17A24422BD408DF008AEE7C /* SymptomsComposeViewController.swift in Sources */,
 				C17A243E2BD4083C008AEE7C /* PetComposeViewController.swift in Sources */,
 				C17A24442BD40935008AEE7C /* SymptomListViewController.swift in Sources */,

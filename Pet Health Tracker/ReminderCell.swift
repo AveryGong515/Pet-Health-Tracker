@@ -14,13 +14,9 @@ class ReminderCell: UITableViewCell {
     @IBOutlet weak var petName: UILabel!
     @IBOutlet weak var dateTime: UILabel!
     @IBOutlet weak var reminderName: UILabel!
+
     
-    @IBAction func didToggleActiveButton(_ sender: Any) {
-        reminder.isActive = false
-        // TODO: implement update on toggle
-        
-        
-    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
