@@ -50,8 +50,12 @@ class PetProfileViewController: UIViewController {
         else{
             weightLabel.text = "Weight: Not Entered"
         }
-        
-        medicalConditionsLabel.text = "Medical Conditions: \(pet.medicalConditions.joined(separator: ", "))"
+        if pet.medicalConditions.count > 0{
+            medicalConditionsLabel.text = "Medical Conditions: \(pet.medicalConditions.joined(separator: ", "))"
+        }
+        else {
+            medicalConditionsLabel.text = "Medical Conditions: None"
+        }
 //        if let imageURL = pet.profilePicture{
 //            Nuke.loadImage(with: imageURL, into: profilePicture)
 //        }

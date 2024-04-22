@@ -16,7 +16,17 @@ struct Reminder: Codable{
     var dateTime: Date
     var isActive: Bool
     
+    let id: String
     
+    
+    init(id: String, pet: Pet, title: String, description: String, dateTime: Date, isActive: Bool){
+        self.id = id
+        self.pet = pet
+        self.title = title
+        self.description = description
+        self.dateTime = dateTime
+        self.isActive = isActive
+    }
 }
 
 extension Reminder {
@@ -57,23 +67,21 @@ extension Reminder {
     func save() {
         // TODO: Save the current task
         var reminders = Reminder.getReminders()
-//        if let index = tasks.firstIndex(where: {$0.id == self.id}){
-//            print("after1",tasks.count)
-//            tasks.remove(at: index)
-//            tasks.insert(self, at: index)
-//
-//        }
-//
-//        else{
-//            print("after2", tasks.count)
-         reminders.append(self)
-//        }
+        if let index = reminders.firstIndex(where: {$0.id == self.id}){
+            reminders.remove(at: index)
+            reminders.insert(self, at: index)
+            
+        }
+        
+        else{
+            reminders.append(self)
+        }
         Reminder.save(reminders, forKey: Reminder.remindersKey)
     }
     
-    static func getReminder(_ title: String)->Reminder?{
+    static func getReminder(_ id: String)->Reminder?{
         let reminders = Reminder.getReminders()
-        if let index = reminders.firstIndex(where: { $0.title == title }) {
+        if let index = reminders.firstIndex(where: { $0.id == id }) {
             return reminders[index]
         }
         return nil
@@ -90,10 +98,7 @@ extension Reminder {
             }
         }
     
-    static func updateReminderActivityStatus(reminder: inout Reminder, newActivityStatus: Bool){
-        reminder.isActive = newActivityStatus
-        
-    }
+   
     
 }
 

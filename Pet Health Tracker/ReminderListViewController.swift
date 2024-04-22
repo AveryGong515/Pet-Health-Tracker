@@ -12,6 +12,7 @@ class ReminderListViewController: UIViewController, UITableViewDataSource, UITab
     
 
     @IBOutlet weak var tableView: UITableView!
+    var onDeactivateButtonTapped: ((Reminder) -> Void)?
     
     var reminders = [Reminder]()
     
@@ -41,15 +42,29 @@ class ReminderListViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath) as! ReminderCell
         let reminder = reminders[indexPath.row]
-        cell.petName.text = reminder.pet.name
-        cell.dateTime.text = Utils.formatDateTimetoString(date: reminder.dateTime)
-        cell.reminderName.text = reminder.title
-//        cell.isActiveToggle.isOn = reminder.isActive
-        // implement cell.configure later
+//        cell.petName.text = reminder.pet.name
+//        cell.dateTime.text = Utils.formatDateTimetoString(date: reminder.dateTime)
+//        cell.reminderName.text = reminder.title
+//
+        cell.configure(with: reminder, onDeactivateButtonTapped: { [weak self] reminder in
+            reminder.save()
+            self?.refreshReminders()
+            
+        })
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // 1.
+        if editingStyle == .delete {
+            // 2.
+            reminders.remove(at: indexPath.row)
+            // 3.
+            Reminder.save(reminders, forKey: Reminder.remindersKey)
+            // 4.
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewReminderDetailSegue"{
@@ -70,9 +85,6 @@ class ReminderListViewController: UIViewController, UITableViewDataSource, UITab
                 }
             }
         }
-        else {
-            print("bad request")
-        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -84,7 +96,20 @@ class ReminderListViewController: UIViewController, UITableViewDataSource, UITab
     func refreshReminders(){
         var reminders = Reminder.getReminders()
         for reminder in reminders{
-            print(reminder.title, reminder.pet.name)
+            print(reminder.title, reminder.isActive)
+        }
+        
+        reminders.sort {rem1, rem2 in
+            if rem1.isActive && rem2.isActive{
+                // reminders closer to due date is prioritized
+                return rem1.dateTime < rem2.dateTime
+            }
+            else if !rem1.isActive && !rem2.isActive{
+                return rem1.dateTime > rem2.dateTime
+            }
+            else {
+                return rem1.isActive && !rem2.isActive
+            }
         }
 //
         // 2.

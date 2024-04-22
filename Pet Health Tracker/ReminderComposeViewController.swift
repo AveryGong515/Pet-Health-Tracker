@@ -56,7 +56,7 @@ class ReminderComposeViewController: UIViewController {
         // check if all required fields are filled out
         if let pet = petChosen, let title = reminderTitle.text, !title.isEmpty{
             // create new Reminder object
-            let newReminder = Reminder(pet: pet, title: title, description: descriptionTextView.text, dateTime: datePicker.date, isActive: true)
+            let newReminder = Reminder(id: UUID().uuidString,pet: pet, title: title, description: descriptionTextView.text, dateTime: datePicker.date, isActive: true)
             onComposeReminder?(newReminder)
             dismiss(animated: true)
         }

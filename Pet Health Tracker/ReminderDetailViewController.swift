@@ -9,15 +9,27 @@ import UIKit
 
 class ReminderDetailViewController: ViewController {
 
-    var reminder: Reminder?
+    var reminder: Reminder!
+    @IBOutlet weak var dateTimeLabel: UILabel!
     @IBOutlet weak var descriptionField: UITextView!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var reminderTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setReminderDetailView()
 
         // Do any additional setup after loading the view.
     }
+    
+    func setReminderDetailView(){
+        descriptionField.text = reminder.description
+        nameLabel.text = reminder.pet.name
+        reminderTitle.text = reminder.title
+        dateTimeLabel.text = Utils.formatDateTimetoString(date: reminder.dateTime)
+        
+    }
+    
     
 
     /*
