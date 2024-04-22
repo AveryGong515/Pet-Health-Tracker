@@ -85,12 +85,43 @@ class PetProfileViewController: UIViewController {
     
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewAllLogsSegue" {
+            guard let petChosen = pet else {return}
+            guard let logListViewController = segue.destination as? LogListViewController else {print("destination LogListViewController is nil");return}
+            logListViewController.pet = petChosen
+            logListViewController.modalPresentationStyle = .fullScreen
+        }
+        if segue.identifier == "ShowChooseLogSegue"{
+            
+            guard let chooseLogTypeViewController = segue.destination as? ChooseLogTypeViewController else {print("destination ChooseLogTypeViewController is nil");return}
+            chooseLogTypeViewController.pet = pet
+            chooseLogTypeViewController.modalPresentationStyle = .fullScreen
+        }
+        
+//        if segue.identifier == "ViewAllLogsSegue"{
+//            if let petComposeViewController = segue.destination as? PetComposeViewController {
+//                petComposeViewController.onComposePet = { [weak self] pet in
+//                    pet.save()
+//                    self?.refreshPets()
+//                    
+//                }
+//            }
+//        }
+       
+    }
+    
+    @IBAction func unwindToPetProfile(_ segue: UIStoryboardSegue){
+        // No need to implement anything here
+    }
+    
     
 
-    @IBAction func didTapLogSymptoms(_ sender: Any) {
-    }
-    @IBAction func didTapSeeAllLogs(_ sender: Any) {
-    }
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

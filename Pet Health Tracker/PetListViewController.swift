@@ -39,6 +39,8 @@ class PetListViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let petRemoved = petList[indexPath.row]
+            // remove all records of a pet
+            
             Pet.deletePet(petRemoved)
             refreshPets()
 
@@ -98,9 +100,7 @@ class PetListViewController: UIViewController, UITableViewDataSource, UITableVie
                 }
             }
         }
-        else {
-            print("bad request")
-        }
+       
     }
     
     

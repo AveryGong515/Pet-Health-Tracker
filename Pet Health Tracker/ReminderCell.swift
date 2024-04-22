@@ -24,6 +24,7 @@ class ReminderCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+
         
     }
 
@@ -117,11 +118,16 @@ class ReminderCell: UITableViewCell {
     private func update(with reminder: Reminder) {
         if reminder.isActive{
             isActiveToggle.setImage(UIImage(systemName: "bell"), for: .normal)
+            timeUntil.text = getTimeUntil(date: reminder.dateTime)
+            timeUntil.textColor = .orange.withAlphaComponent(0.68)
+           
         }
         else {
 //            print("reminder with id \(reminder.id) is active 8: ", reminder.isActive)
             isActiveToggle.setImage(UIImage(systemName: "bell.slash"), for: .normal)
 //            print("reminder with id \(reminder.id) is active 9: ", reminder.isActive)
+            timeUntil.text = "reminder inactive"
+            timeUntil.textColor = .lightGray
             
         }
     }

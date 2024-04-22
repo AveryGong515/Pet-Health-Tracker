@@ -18,6 +18,34 @@ struct Pet: Codable{
     var weight: Float?
     var medicalConditions: [String]
     var profilePicture: URL?
+    // for each pet, the symptom names should be unique
+    var symptomLogNames: [String]
+    // for each pet, the medication names should be unique
+    var medsLogNames: [String]
+    // for each pet, the vaccination names should be unique
+    var vaccLogNames: [String]
+
+ 
+    
+    let id: String
+    
+    
+    init(id: String, name: String, birthDate: Date, species: String, breed: String, sex: String, fixed: Bool, weight: Float?, medicalConditions: [String], profilePicture: URL?, symptomLogNames: [String] = [], medsLogNames: [String] = [], vaccLogNames: [String] = []){
+        self.id = id
+        self.name = name
+        self.birthDate = birthDate
+        self.species = species
+        self.breed = breed
+        self.sex = sex
+        self.fixed = fixed
+        self.weight = weight
+        self.medicalConditions = medicalConditions
+        self.profilePicture = profilePicture
+        self.symptomLogNames = symptomLogNames
+        self.medsLogNames = medsLogNames
+        self.vaccLogNames = vaccLogNames
+       
+    }
     
     
     
@@ -58,21 +86,17 @@ extension Pet {
     
     
 
-    // Add a new task or update an existing task with the current task.
+    // Add a new task or update an existing pet with the current pet.
     func save() {
-        // TODO: Save the current task
         var pets = Pet.getPets()
-//        if let index = tasks.firstIndex(where: {$0.id == self.id}){
-//            print("after1",tasks.count)
-//            tasks.remove(at: index)
-//            tasks.insert(self, at: index)
-//            
-//        }
-//        
-//        else{
-//            print("after2", tasks.count)
-         pets.append(self)
-//        }
+        if let index = pets.firstIndex(where: {$0.id == self.id}){
+            pets.remove(at: index)
+            pets.insert(self, at: index)
+        }
+
+        else{
+            pets.append(self)
+        }
         Pet.save(pets, forKey: Pet.petsKey)
     }
     
@@ -95,10 +119,7 @@ extension Pet {
             }
         }
     
-    static func updatePetInfo(pet: inout Pet, newWeight: Float){
-        pet.weight = newWeight
-        
-    }
+   
     
 }
 

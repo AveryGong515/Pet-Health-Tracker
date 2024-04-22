@@ -68,12 +68,14 @@ extension Reminder {
         // TODO: Save the current task
         var reminders = Reminder.getReminders()
         if let index = reminders.firstIndex(where: {$0.id == self.id}){
+            // updating existing Reminder
             reminders.remove(at: index)
             reminders.insert(self, at: index)
             
         }
         
         else{
+            // creating new Reminder
             reminders.append(self)
         }
         Reminder.save(reminders, forKey: Reminder.remindersKey)

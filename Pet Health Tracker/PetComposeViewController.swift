@@ -68,7 +68,7 @@ class PetComposeViewController: UIViewController {
         
         
             
-        let newPet = Pet(name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "Unspecied Species", breed: breed, sex: getSelectedSex(), fixed: getSelectedFixed(), weight: weightEntered, medicalConditions: getEnteredMedicalConditions())
+        let newPet = Pet(id: UUID().uuidString, name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "Unspecied Species", breed: breed, sex: getSelectedSex(), fixed: getSelectedFixed(), weight: weightEntered, medicalConditions: getEnteredMedicalConditions(), profilePicture: nil)
 
         onComposePet?(newPet)
         dismiss(animated: true)
@@ -76,17 +76,6 @@ class PetComposeViewController: UIViewController {
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-//        if segue.identifier == "saveNewPetSegue" {
-//            
-//            if let petListViewController = segue.destination as? PetListViewController {
-//                print(weightField.text ?? "nothing")
-//                
-//                let newPet = Pet(name: nameField!.text ?? "No Name", birthDate: datePicker.date, species: speciesField.text ?? "unknown species", breed: breedField.text ?? "unknown breed", sex: getSelectedSex(), fixed: getSelectedFixed(), weight: 15.0, medicalConditions: getEnteredMedicalConditions())
-//                petListViewController.petList.append(newPet)
-//            }
-//        }
-//    }
     
     
     func formatDate(_ date: Date)->String{

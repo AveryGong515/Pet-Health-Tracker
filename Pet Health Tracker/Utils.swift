@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct Utils {
     
@@ -21,5 +21,27 @@ struct Utils {
     
     
     
+    
+    
 }
+
+enum LogType: String {
+    case symptom = "symptom"
+    case medication = "medication"
+    case vaccination = "vaccination"
+}
+
+enum DosageUnit: String {
+    case mL = "mL"
+    case mg = "mg"
+}
+
+enum Severity: String {
+    case none = "None"
+    case mild = "Mild"
+    case moderate = "Moderate"
+    case severe = "Severe"
+}
+
+
 

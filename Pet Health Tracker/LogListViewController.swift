@@ -7,15 +7,32 @@
 
 import UIKit
 
-class SymptomListViewController: UIViewController {
+class LogListViewController: UIViewController {
 
+    
+    var pet: Pet!
+    @IBOutlet weak var symptomListTableView: UITableView!
+    
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configure()
+        
 
         // Do any additional setup after loading the view.
     }
     
-
+    func configure(){
+        
+        navigationBar.title = "\(pet.name): All Logs"
+    }
+    
+    @IBAction func didTapBackButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
