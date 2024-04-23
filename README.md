@@ -15,6 +15,7 @@ Original App Design Project
 ### Description
 
 Pet Health Tracker is an app for keeping our furry friends healthy and happy. Create reminders for vaccinations, medications, and check-ups. Track symptoms and health changes for pets with medical conditions. 
+***Here is a demo video of my progress:*** https://youtu.be/LHknUrXSZLY
 
 ### App Evaluation
 
@@ -39,8 +40,8 @@ Pet Health Tracker is an app for keeping our furry friends healthy and happy. Cr
 - [x] User can create events or reminders for pets
 - [x] User can view upcoming events or reminders on the dashboard
 - [x] User can view details of upcoming events or reminders
-- [ ] User can create symptom watch trackers
-- [ ] User can create symptom watch tracker entries to log daily pet symptoms
+- [x] User can create symptom watch trackers
+- [x] User can create symptom watch tracker entries to log daily pet symptoms
 
 
 **Optional Nice-to-have Stories**
