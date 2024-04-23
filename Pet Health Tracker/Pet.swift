@@ -110,6 +110,17 @@ extension Pet {
         
     }
     
+    static func getPetByName(_ name: String)->Pet?{
+        let pets = Pet.getPets()
+        if let index = pets.firstIndex(where: { $0.name == name }) {
+            return pets[index]
+        }
+        return nil
+        
+    }
+    
+    
+    
     
     static func deletePet(_ pet: Pet) {
         

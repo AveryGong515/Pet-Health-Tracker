@@ -10,6 +10,7 @@
 		C11919942BD6D0E70029A534 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11919932BD6D0E70029A534 /* LogEntry.swift */; };
 		C11919962BD6EE1D0029A534 /* ChooseLogTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11919952BD6EE1D0029A534 /* ChooseLogTypeViewController.swift */; };
 		C11919982BD72BEC0029A534 /* LogEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11919972BD72BEC0029A534 /* LogEntryCell.swift */; };
+		C119199A2BD75A870029A534 /* LogEntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11919992BD75A870029A534 /* LogEntryDetailViewController.swift */; };
 		C17A243C2BD40814008AEE7C /* PetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243B2BD40814008AEE7C /* PetListViewController.swift */; };
 		C17A243E2BD4083C008AEE7C /* PetComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243D2BD4083C008AEE7C /* PetComposeViewController.swift */; };
 		C17A24402BD408B4008AEE7C /* PetProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243F2BD408B4008AEE7C /* PetProfileViewController.swift */; };
@@ -35,6 +36,7 @@
 		C11919932BD6D0E70029A534 /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
 		C11919952BD6EE1D0029A534 /* ChooseLogTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLogTypeViewController.swift; sourceTree = "<group>"; };
 		C11919972BD72BEC0029A534 /* LogEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryCell.swift; sourceTree = "<group>"; };
+		C11919992BD75A870029A534 /* LogEntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryDetailViewController.swift; sourceTree = "<group>"; };
 		C17A243B2BD40814008AEE7C /* PetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListViewController.swift; sourceTree = "<group>"; };
 		C17A243D2BD4083C008AEE7C /* PetComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetComposeViewController.swift; sourceTree = "<group>"; };
 		C17A243F2BD408B4008AEE7C /* PetProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				C1AD48E22BCF593900A9E31D /* SceneDelegate.swift */,
 				C1AD48E42BCF593900A9E31D /* ViewController.swift */,
 				C1AD48E62BCF593900A9E31D /* Main.storyboard */,
+				C11919992BD75A870029A534 /* LogEntryDetailViewController.swift */,
 				C11919952BD6EE1D0029A534 /* ChooseLogTypeViewController.swift */,
 				C17A24432BD40935008AEE7C /* LogListViewController.swift */,
 				C11919972BD72BEC0029A534 /* LogEntryCell.swift */,
@@ -205,6 +208,7 @@
 				C1AD48F72BCF616100A9E31D /* ReminderCell.swift in Sources */,
 				C11919982BD72BEC0029A534 /* LogEntryCell.swift in Sources */,
 				C11919942BD6D0E70029A534 /* LogEntry.swift in Sources */,
+				C119199A2BD75A870029A534 /* LogEntryDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

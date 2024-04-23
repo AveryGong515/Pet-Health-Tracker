@@ -56,7 +56,7 @@ class ReminderComposeViewController: UIViewController {
         // check if all required fields are filled out
         if let pet = petChosen, let title = reminderTitle.text, !title.isEmpty{
             // create new Reminder object
-            let newReminder = Reminder(id: UUID().uuidString,pet: pet, title: title, description: descriptionTextView.text, dateTime: datePicker.date, isActive: true)
+            let newReminder = Reminder(id: UUID().uuidString, pet: pet, title: title, description: descriptionTextView.text, dateTime: datePicker.date, isActive: true)
             onComposeReminder?(newReminder)
             dismiss(animated: true)
         }
@@ -73,7 +73,7 @@ class ReminderComposeViewController: UIViewController {
         // Set the button title as the pet's name whose been chosen
         petNameSelectionButton.setTitle("Reminder For:  \(action.title)", for: .normal)
         // set the petChosen to be this pet
-        petChosen = Pet.getPet(action.title)
+        petChosen = Pet.getPetByName(action.title)
         
         
     }

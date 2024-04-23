@@ -48,7 +48,7 @@ class PetProfileViewController: UIViewController {
             weightLabel.text = "Weight: \(weight) lbs"
         }
         else{
-            weightLabel.text = "Weight: Not Entered"
+            weightLabel.text = "Weight: N/A"
         }
         print("\(pet.name)'s medical conditions: \(pet.medicalConditions)")
         if !pet.medicalConditions.isEmpty{
@@ -91,13 +91,13 @@ class PetProfileViewController: UIViewController {
             guard let petChosen = pet else {return}
             guard let logListViewController = segue.destination as? LogListViewController else {print("destination LogListViewController is nil");return}
             logListViewController.pet = petChosen
+            logListViewController.logEntries = LogEntry.getLogEntriesFor(petID:logListViewController.pet.id)
             logListViewController.modalPresentationStyle = .fullScreen
         }
         if segue.identifier == "ShowChooseLogSegue"{
             
             guard let chooseLogTypeViewController = segue.destination as? ChooseLogTypeViewController else {print("destination ChooseLogTypeViewController is nil");return}
             chooseLogTypeViewController.pet = sender as? Pet
-//            print(chooseLogTypeViewController.pet.symptomLogNames)
             chooseLogTypeViewController.modalPresentationStyle = .fullScreen
             
         }
@@ -111,16 +111,12 @@ class PetProfileViewController: UIViewController {
     
     
     @IBAction func unwindToPetProfile(_ segue: UIStoryboardSegue){
-//        if let logComposeViewController = segue.source as? LogComposeViewController{
-//            logComposeViewController.onComposeLog = { [weak self] logEntry, pet in
-//                logEntry.save()
-//                pet.save()
-////                Utils.defaults.set(Pet.getPets(), forKey: Pet.petsKey)
-////                Utils.defaults.synchronize()
-//            }
-            print("This info is saved: \(Pet.getPet(pet.id)?.symptomLogNames)")
+
+
+        
             pet = Pet.getPet(pet.id)
-//            }
+            
+            print("log entries saved: \(LogEntry.getLogEntriesFor(petID: pet.id))")
         }
         
     

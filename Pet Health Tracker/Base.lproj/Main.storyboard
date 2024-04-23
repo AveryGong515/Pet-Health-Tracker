@@ -1033,7 +1033,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1X3-Aw-P4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="gHh-c6-46W" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4321.3740458015263" y="1276.7605633802818"/>
+            <point key="canvasLocation" x="4378" y="1287"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zac-0I-7Nc">
+            <objects>
+                <viewController id="aSr-dL-WDT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KaS-5a-Z3y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dls-nO-Xxv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mWi-a5-Jvx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ds2-P8-gxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4430" y="2049"/>
         </scene>
         <!--Choose Log Type View Controller-->
         <scene sceneID="p4R-FF-7So">
@@ -1092,6 +1108,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="aSr-dL-WDT" kind="show" id="e4J-hl-5YM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGp-Qk-XuQ">
                                 <rect key="frame" x="47" y="550" width="294" height="69"/>
@@ -1195,33 +1214,42 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="105" id="zJe-qS-hdB" customClass="LogEntryCell" customModule="Pet_Health_Tracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogEntryCell" rowHeight="105" id="zJe-qS-hdB" customClass="LogEntryCell" customModule="Pet_Health_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zJe-qS-hdB" id="CfO-uq-788">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-5b-9VM">
-                                                    <rect key="frame" x="43" y="35" width="82" height="27"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-5b-9VM">
+                                                    <rect key="frame" x="103" y="26" width="192" height="26"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="yyyy-MM-dd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8J-EC-HNZ">
+                                                    <rect key="frame" x="98" y="60" width="208" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MM/DD/YYYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8J-EC-HNZ">
-                                                    <rect key="frame" x="179" y="35" width="134" height="27"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tml-Rd-dMz">
+                                                    <rect key="frame" x="25" y="36" width="50" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="stethoscope.circle" catalog="system"/>
+                                                </button>
                                             </subviews>
                                             <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateTime" destination="r8J-EC-HNZ" id="z9E-58-d8y"/>
+                                            <outlet property="logTypeSymbol" destination="tml-Rd-dMz" id="Vxq-cz-I0r"/>
                                             <outlet property="title" destination="fAc-5b-9VM" id="CCP-Fh-Hie"/>
+                                            <segue destination="LAj-bp-4VM" kind="showDetail" identifier="LogEntryDetailSegue" id="PwI-xx-9dl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1232,13 +1260,122 @@
                     </view>
                     <navigationItem key="navigationItem" id="p0O-tM-TZI"/>
                     <connections>
+                        <outlet property="logEntriesTableView" destination="Jv8-Qh-sOh" id="c3k-Yb-nHD"/>
                         <outlet property="navigationBar" destination="yFq-nW-iyT" id="YS9-M6-tZK"/>
-                        <outlet property="symptomListTableView" destination="Jv8-Qh-sOh" id="c3k-Yb-nHD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7s-63-aLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2212.9770992366412" y="2102.816901408451"/>
+        </scene>
+        <!--Log Entry Detail View Controller-->
+        <scene sceneID="vJ4-ex-QdV">
+            <objects>
+                <viewController id="LAj-bp-4VM" customClass="LogEntryDetailViewController" customModule="Pet_Health_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2vS-Tc-jyt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xEb-8B-DvW">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Log Entry Details" id="aFf-EL-gac">
+                                        <barButtonItem key="leftBarButtonItem" title="All Logs" id="y6v-bf-Jbw"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pet name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHW-f2-BJy">
+                                <rect key="frame" x="56" y="227" width="281" height="34"/>
+                                <color key="backgroundColor" red="0.41831028460000003" green="0.58926451209999997" blue="0.88216131929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.9137064815" green="0.91383141280000002" blue="0.92207586770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="log type" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Czt-MK-0M2">
+                                <rect key="frame" x="56" y="278" width="281" height="34"/>
+                                <color key="backgroundColor" red="0.41831028460000003" green="0.58926451209999997" blue="0.88216131929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.9137064815" green="0.91383141280000002" blue="0.92207586770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="severity" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-Bv-zi8">
+                                <rect key="frame" x="56" y="329" width="281" height="34"/>
+                                <color key="backgroundColor" red="0.41831028460000003" green="0.58926451209999997" blue="0.88216131929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.9137064815" green="0.91383141280000002" blue="0.92207586770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="frequency" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9d-90-ZhU">
+                                <rect key="frame" x="56" y="380" width="281" height="34"/>
+                                <color key="backgroundColor" red="0.41831028460000003" green="0.58926451209999997" blue="0.88216131929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.9137064815" green="0.91383141280000002" blue="0.92207586770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timestamp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-eA-Fm6">
+                                <rect key="frame" x="56" y="178" width="281" height="20"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HHu-Lt-hd7">
+                                <rect key="frame" x="56" y="436" width="281" height="142"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.58386796357615889" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="fdP-aU-5zD"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Log Entry Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fm-0Y-gU9">
+                                <rect key="frame" x="75" y="138" width="249" height="24"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bGK-DN-G7q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Czt-MK-0M2" firstAttribute="top" secondItem="HHW-f2-BJy" secondAttribute="bottom" constant="17" id="1cd-eT-bim"/>
+                            <constraint firstItem="HHu-Lt-hd7" firstAttribute="centerX" secondItem="xEb-8B-DvW" secondAttribute="centerX" id="4UB-Sq-nx0"/>
+                            <constraint firstItem="bGK-DN-G7q" firstAttribute="bottom" secondItem="HHu-Lt-hd7" secondAttribute="bottom" constant="264" id="6BT-25-tWH"/>
+                            <constraint firstItem="HHW-f2-BJy" firstAttribute="centerX" secondItem="2vS-Tc-jyt" secondAttribute="centerX" id="DIX-H1-uHn"/>
+                            <constraint firstItem="EeO-Bv-zi8" firstAttribute="centerX" secondItem="xEb-8B-DvW" secondAttribute="centerX" id="DOo-bR-Lm7"/>
+                            <constraint firstItem="HHW-f2-BJy" firstAttribute="leading" secondItem="Czt-MK-0M2" secondAttribute="leading" id="F4y-jt-ylq"/>
+                            <constraint firstItem="cMN-eA-Fm6" firstAttribute="leading" secondItem="bGK-DN-G7q" secondAttribute="leading" constant="56" id="HL6-Tq-EOW"/>
+                            <constraint firstItem="cMN-eA-Fm6" firstAttribute="top" secondItem="xEb-8B-DvW" secondAttribute="bottom" constant="75" id="Hor-ZC-OJf"/>
+                            <constraint firstItem="HHu-Lt-hd7" firstAttribute="top" secondItem="F9d-90-ZhU" secondAttribute="bottom" constant="22" id="Lhg-Vu-nBt"/>
+                            <constraint firstItem="bGK-DN-G7q" firstAttribute="trailing" secondItem="cMN-eA-Fm6" secondAttribute="trailing" constant="56" id="Lx7-wZ-MtX"/>
+                            <constraint firstItem="EeO-Bv-zi8" firstAttribute="leading" secondItem="F9d-90-ZhU" secondAttribute="leading" id="QnQ-ze-ljd"/>
+                            <constraint firstItem="F9d-90-ZhU" firstAttribute="leading" secondItem="HHu-Lt-hd7" secondAttribute="leading" id="SAX-TJ-Rqb"/>
+                            <constraint firstItem="HHW-f2-BJy" firstAttribute="leading" secondItem="bGK-DN-G7q" secondAttribute="leading" constant="56" id="Yyo-Or-rnc"/>
+                            <constraint firstItem="HHW-f2-BJy" firstAttribute="centerX" secondItem="xEb-8B-DvW" secondAttribute="centerX" id="ZGC-7Z-LCL"/>
+                            <constraint firstItem="HHW-f2-BJy" firstAttribute="top" secondItem="cMN-eA-Fm6" secondAttribute="bottom" constant="29" id="eQ1-a9-tJe"/>
+                            <constraint firstItem="Czt-MK-0M2" firstAttribute="centerX" secondItem="xEb-8B-DvW" secondAttribute="centerX" id="ejQ-JA-rs5"/>
+                            <constraint firstItem="F9d-90-ZhU" firstAttribute="top" secondItem="EeO-Bv-zi8" secondAttribute="bottom" constant="17" id="hJ1-C5-Cma"/>
+                            <constraint firstItem="cMN-eA-Fm6" firstAttribute="top" secondItem="3fm-0Y-gU9" secondAttribute="bottom" constant="16" id="jjJ-Ih-Ek6"/>
+                            <constraint firstItem="3fm-0Y-gU9" firstAttribute="leading" secondItem="bGK-DN-G7q" secondAttribute="leading" constant="75" id="rGV-B2-8b3"/>
+                            <constraint firstItem="Czt-MK-0M2" firstAttribute="leading" secondItem="EeO-Bv-zi8" secondAttribute="leading" id="uNG-pu-y5u"/>
+                            <constraint firstItem="EeO-Bv-zi8" firstAttribute="top" secondItem="Czt-MK-0M2" secondAttribute="bottom" constant="17" id="vLI-zF-XbG"/>
+                            <constraint firstItem="F9d-90-ZhU" firstAttribute="centerX" secondItem="xEb-8B-DvW" secondAttribute="centerX" id="wZZ-gT-rHV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionField" destination="HHu-Lt-hd7" id="SYw-cJ-0jB"/>
+                        <outlet property="entryField1" destination="EeO-Bv-zi8" id="UUp-6b-6nx"/>
+                        <outlet property="entryField2" destination="F9d-90-ZhU" id="SyW-xu-YIf"/>
+                        <outlet property="logName" destination="3fm-0Y-gU9" id="z6K-iB-tSJ"/>
+                        <outlet property="logType" destination="Czt-MK-0M2" id="X8g-ul-xi5"/>
+                        <outlet property="petName" destination="HHW-f2-BJy" id="wCH-GI-4hA"/>
+                        <outlet property="timeStamp" destination="cMN-eA-Fm6" id="Yaj-P2-ZsS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maP-WM-37G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2965.6488549618321" y="2102.816901408451"/>
         </scene>
     </scenes>
     <resources>
@@ -1250,6 +1387,10 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <image name="square.and.pencil.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="stethoscope.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="lightTextColor">
             <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

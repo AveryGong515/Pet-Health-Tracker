@@ -14,16 +14,18 @@ class LogListViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var pet: Pet!
     
-    @IBOutlet weak var symptomListTableView: UITableView!
+    @IBOutlet weak var logEntriesTableView: UITableView!
     
     @IBOutlet weak var navigationBar: UINavigationItem!
     
-    var symptomLogEntries = [LogEntry]()
+    
+    var logEntries = [LogEntry]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        symptomListTableView.delegate = self
-        symptomListTableView.dataSource = self
+        logEntriesTableView.rowHeight = 100
+        logEntriesTableView.delegate = self
+        logEntriesTableView.dataSource = self
         
         configure()
         
@@ -41,13 +43,71 @@ class LogListViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return symptomLogEntries.count
+        return logEntries.count
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LogEntryCell", for: indexPath) as! LogEntryCell
-        let log = symptomLogEntries[indexPath.row]
+        let log = logEntries[indexPath.row]
+        cell.title.text = log.logTitle
+        cell.dateTime.text = Utils.formatDateTimetoString(date: log.timeStamp)
+        switch log.logType{
+        case LogType.symptom.rawValue:
+            cell.logTypeSymbol.setImage(UIImage(systemName: "stethoscope.circle"), for:.normal)
+            break
+        
+        case LogType.medication.rawValue:
+            cell.logTypeSymbol.setImage(UIImage(systemName: "pill.circle"), for:.normal)
+            break
+        case LogType.vaccination.rawValue:
+            cell.logTypeSymbol.setImage(UIImage(systemName: "syringe"), for:.normal)
+            break
+        default:
+            print("invalid LogType")
+            break
+        }
+        
+        
         return cell
+    }
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Deselect the row after tapping
+        logEntriesTableView.deselectRow(at: indexPath, animated: true)
+    
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LogEntryDetailSegue"{
+            guard let selectedIndexPath = logEntriesTableView.indexPathForSelectedRow else {return}
+            let selectedEntry = logEntries[selectedIndexPath.row]
+            guard let logEntryDetailViewController = segue.destination as? LogEntryDetailViewController else {return}
+            logEntryDetailViewController.logEntry = selectedEntry
+            
+        }
+        
+//        if segue.identifier == "ViewPetProfileSegue" {
+//            guard let selectedIndexPath = petListTableView.indexPathForSelectedRow else {return}
+//            let selectedPet = petList[selectedIndexPath.row]
+//            guard let petProfileViewController = segue.destination as? PetProfileViewController else {return}
+//            petProfileViewController.pet = selectedPet
+//        }
+//        if segue.identifier == "ComposePetSegue"{
+//            if let petComposeViewController = segue.destination as? PetComposeViewController {
+//                petComposeViewController.onComposePet = { [weak self] pet in
+//                    pet.save()
+//                    self?.refreshPets()
+//                    
+//                }
+//            }
+//        }
+       
     }
     /*
     // MARK: - Navigation

@@ -11,6 +11,9 @@ class LogEntryCell: UITableViewCell {
 
     @IBOutlet weak var dateTime: UILabel!
     @IBOutlet weak var title: UILabel!
+
+    @IBOutlet weak var logTypeSymbol: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

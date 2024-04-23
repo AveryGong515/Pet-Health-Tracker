@@ -72,6 +72,7 @@ class ReminderListViewController: UIViewController, UITableViewDataSource, UITab
             let selectedReminder = reminders[selectedIndexPath.row]
             guard let reminderDetailViewController = segue.destination as? ReminderDetailViewController else {return}
             reminderDetailViewController.reminder = selectedReminder
+            
                     
                 
             }

@@ -48,7 +48,6 @@ class LogComposeViewController: UIViewController {
 //            print("here1")
             let newLog = LogEntry(id: UUID().uuidString, logTitle: newSymptomText, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "")
             pet.symptomLogNames.append(newSymptomText.lowercased())
-            print("seriously I'm ahhahaha: \(pet.symptomLogNames)")
             pet.save()
             Pet.save(Pet.getPets(), forKey: Pet.petsKey)
             newLog.save()
@@ -61,6 +60,8 @@ class LogComposeViewController: UIViewController {
 //            print("here2,\(symptomName)")
             // case 2: existing symptom AND severity selected
             let newLog = LogEntry(id: UUID().uuidString, logTitle: symptomName, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "")
+                newLog.save()
+                LogEntry.save(LogEntry.getLogEntries(), forKey: LogEntry.logEntryKey)
 //            dismiss(animated: true)
             performSegue(withIdentifier: "unwindToPetProfile", sender: nil)
         }

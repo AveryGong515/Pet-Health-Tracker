@@ -94,12 +94,10 @@ extension LogEntry{
         LogEntry.save(logEntries, forKey: LogEntry.logEntryKey)
     }
     
-    static func getLogEntry(_ id: String)->LogEntry?{
+    static func getLogEntriesFor(petID: String)->[LogEntry]{
         let logEntries = LogEntry.getLogEntries()
-        if let index = logEntries.firstIndex(where: { $0.id == id }) {
-            return logEntries[index]
-        }
-        return nil
+        let entriesForPet = logEntries.filter { $0.pet.id == petID }
+        return entriesForPet
         
     }
     
