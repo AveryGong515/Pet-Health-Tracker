@@ -812,6 +812,7 @@
                                     <color key="baseForegroundColor" red="0.45092743899999999" green="0.5820027968" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="didTapCreateLog:" destination="bsF-rv-cU5" eventType="touchUpInside" id="usb-Wz-4kX"/>
                                     <segue destination="tMg-yu-KQX" kind="showDetail" identifier="ShowChooseLogSegue" id="vEu-pK-SwQ"/>
                                 </connections>
                             </button>
@@ -1068,6 +1069,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
+                                    <action selector="didTapSymptomButton:" destination="tMg-yu-KQX" eventType="touchUpInside" id="OKZ-BL-qtb"/>
                                     <segue destination="Gr1-IL-bui" kind="show" identifier="CreateSymptomLogSegue" id="1mK-OO-xQM"/>
                                 </connections>
                             </button>

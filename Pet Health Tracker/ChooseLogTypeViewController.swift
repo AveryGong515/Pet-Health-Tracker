@@ -15,6 +15,8 @@ class ChooseLogTypeViewController: ViewController {
     @IBOutlet weak var chooseVaccinationLogType: UIButton!
     @IBOutlet weak var chooseMedicationLogType: UIButton!
     
+//    var onComposeLog:  ((LogEntry) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,37 +42,31 @@ class ChooseLogTypeViewController: ViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func didTapSymptomButton(_ sender: Any) {
+        performSegue(withIdentifier: "CreateSymptomLogSegue", sender: self.pet)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CreateSymptomLogSegue"{
             if let logComposeViewController = segue.destination as? LogComposeViewController {
-                logComposeViewController.pet = pet
+                
+//                logComposeViewController.pet = pet
+                logComposeViewController.pet = sender as? Pet
                 logComposeViewController.logType = LogType.symptom.rawValue
                 logComposeViewController.modalPresentationStyle = .fullScreen
+                
+                
+
+                }
+                
             }
         }
         
-//        if segue.identifier == "ViewAllLogsSegue"{
-//            if let petComposeViewController = segue.destination as? PetComposeViewController {
-//                petComposeViewController.onComposePet = { [weak self] pet in
-//                    pet.save()
-//                    self?.refreshPets()
-//
-//                }
-//            }
-//        }
+
        
     }
     
     
     
-    /*
-    // MARK: - Navigation
+   
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
-}

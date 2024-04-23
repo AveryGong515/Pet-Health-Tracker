@@ -96,27 +96,34 @@ class PetProfileViewController: UIViewController {
         if segue.identifier == "ShowChooseLogSegue"{
             
             guard let chooseLogTypeViewController = segue.destination as? ChooseLogTypeViewController else {print("destination ChooseLogTypeViewController is nil");return}
-            chooseLogTypeViewController.pet = pet
-            print(chooseLogTypeViewController.pet.symptomLogNames)
+            chooseLogTypeViewController.pet = sender as? Pet
+//            print(chooseLogTypeViewController.pet.symptomLogNames)
             chooseLogTypeViewController.modalPresentationStyle = .fullScreen
             
         }
+    }
         
-//        if segue.identifier == "ViewAllLogsSegue"{
-//            if let petComposeViewController = segue.destination as? PetComposeViewController {
-//                petComposeViewController.onComposePet = { [weak self] pet in
-//                    pet.save()
-//                    self?.refreshPets()
-//                    
-//                }
-//            }
-//        }
-       
+    @IBAction func didTapCreateLog(_ sender: Any) {
+        performSegue(withIdentifier: "ShowChooseLogSegue", sender: pet)
     }
     
+       
+    
+    
     @IBAction func unwindToPetProfile(_ segue: UIStoryboardSegue){
-        // No need to implement anything here
-    }
+//        if let logComposeViewController = segue.source as? LogComposeViewController{
+//            logComposeViewController.onComposeLog = { [weak self] logEntry, pet in
+//                logEntry.save()
+//                pet.save()
+////                Utils.defaults.set(Pet.getPets(), forKey: Pet.petsKey)
+////                Utils.defaults.synchronize()
+//            }
+            print("This info is saved: \(Pet.getPet(pet.id)?.symptomLogNames)")
+            pet = Pet.getPet(pet.id)
+//            }
+        }
+        
+    
     
     
 

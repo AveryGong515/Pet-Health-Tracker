@@ -29,6 +29,9 @@ class LogComposeViewController: UIViewController {
     
     @IBOutlet weak var timeStamp: UIDatePicker!
     
+    
+    var onComposeLog: ((LogEntry, Pet) -> Void)? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,16 +41,19 @@ class LogComposeViewController: UIViewController {
     
     
     @IBAction func didTapSaveButton(_ sender: Any) {
-        print("here0")
+
         // check if (either new symptom is added OR selected symptom) AND severity is selected
         if let newSymptomText = newSymptom.text, let severity = severitySelected, !newSymptomText.isEmpty{
             // case 1: new symptom added AND severity selected
 //            print("here1")
             let newLog = LogEntry(id: UUID().uuidString, logTitle: newSymptomText, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "")
             pet.symptomLogNames.append(newSymptomText.lowercased())
+            print("seriously I'm ahhahaha: \(pet.symptomLogNames)")
             pet.save()
-            
-            //refresh menu
+            Pet.save(Pet.getPets(), forKey: Pet.petsKey)
+            newLog.save()
+            LogEntry.save(LogEntry.getLogEntries(), forKey: LogEntry.logEntryKey)
+            onComposeLog?(newLog, pet)
             selectSymptom.menu = setSymptomNameMenuOptions()
             performSegue(withIdentifier: "unwindToPetProfile", sender: nil)
         }
@@ -61,26 +67,7 @@ class LogComposeViewController: UIViewController {
         else {
             presentAlert(title: "Unable to save log", message: "Please ensure to select a symptom and severity!")
         }
-        
-        
-//        if let isNewSymptomVal = isNewSymptom, let symptomSelectedOrAdded = , let severity = severitySelected {
-//            // symptom and severity selected
-//            let newLog = LogEntry(id: UUID().uuidString, logTitle: symptom, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "")
-//            if isNewSymptomVal{
-//                pet.symptomLogNames.append(symptom.lowercased())
-//                pet.save()
-//                
-//                
-//            }
-////            presentAlert(title: "Log successfully entered!", message: "Now you could either add a new log or go back to profile page.")
-//            dismiss(animated: true)
-//            
-//            
-//        }
-//        else {
-//            presentAlert(title: "Unable to save log", message: "Please ensure to select a symptom and severity!")
-//        }
-       
+
 
        
     }

@@ -90,6 +90,7 @@ extension Pet {
     func save() {
         var pets = Pet.getPets()
         if let index = pets.firstIndex(where: {$0.id == self.id}){
+            print("index here: \(index)")
             pets.remove(at: index)
             pets.insert(self, at: index)
         }
@@ -100,9 +101,9 @@ extension Pet {
         Pet.save(pets, forKey: Pet.petsKey)
     }
     
-    static func getPet(_ name: String)->Pet?{
+    static func getPet(_ id: String)->Pet?{
         let pets = Pet.getPets()
-        if let index = pets.firstIndex(where: { $0.name == name }) {
+        if let index = pets.firstIndex(where: { $0.id == id }) {
             return pets[index]
         }
         return nil
