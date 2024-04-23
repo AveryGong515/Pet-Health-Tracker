@@ -3,6 +3,8 @@ Original App Design Project
 
 # Pet Health Tracker
 
+***Unit 9 Milestone Update - Demo Video:*** https://youtu.be/LHknUrXSZLY
+
 ## Table of Contents
 
 1. [Overview](#Overview)
@@ -15,7 +17,7 @@ Original App Design Project
 ### Description
 
 Pet Health Tracker is an app for keeping our furry friends healthy and happy. Create reminders for vaccinations, medications, and check-ups. Track symptoms and health changes for pets with medical conditions. 
-***Here is a demo video of my progress:*** https://youtu.be/LHknUrXSZLY
+
 
 ### App Evaluation
 
