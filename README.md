@@ -5,6 +5,8 @@ Original App Design Project
 
 ***Unit 9 Milestone Update - Demo Video:*** https://youtu.be/LHknUrXSZLY
 
+ Here is a gif version, but please go to the youtube link for a higher quality and faster demo.
+ 
 ![](capstone-milestone-demo.gif)
 
 
