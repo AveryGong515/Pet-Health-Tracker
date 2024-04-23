@@ -5,6 +5,11 @@ Original App Design Project
 
 ***Unit 9 Milestone Update - Demo Video:*** https://youtu.be/LHknUrXSZLY
 
+<img src="capstone-milestone-demo.gif" width="250" height="560"/>
+
+
+
+
 
 Tackled sprints this week:
 - Reminder scene with add, delete reminder for User's pets
