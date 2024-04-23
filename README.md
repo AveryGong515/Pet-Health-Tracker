@@ -5,6 +5,14 @@ Original App Design Project
 
 ***Unit 9 Milestone Update - Demo Video:*** https://youtu.be/LHknUrXSZLY
 
+
+Tackled sprints this week:
+- Reminder scene with add, delete reminder for User's pets
+- Pet list scene with all pet's basic info displayed in TableView
+- Pet profile scene with the pet's specific info
+- Create log for specific pet; target is to support 3 types of log entries (symptom, medication, and vaccination), so far completed symptom logging
+- See all logs for specific pet
+
 ## Table of Contents
 
 1. [Overview](#Overview)
