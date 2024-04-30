@@ -49,9 +49,11 @@ class LogEntryDetailViewController: ViewController {
             
             break
         case LogType.medication.rawValue:
+           
             
-            entryField1.text = "Dosage: \(logEntry.dosage) \(logEntry.dosageUnit)"
+            entryField1.text = "Dosage: \(logEntry.dosage ?? 0) \(logEntry.dosageUnit ?? "mL")"
             entryField2.isHidden = true
+            
             break
         case LogType.vaccination.rawValue:
             

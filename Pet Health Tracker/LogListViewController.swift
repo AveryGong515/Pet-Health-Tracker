@@ -109,6 +109,30 @@ class LogListViewController: UIViewController, UITableViewDelegate, UITableViewD
 //        }
        
     }
+    
+    
+    // add swipe to delete
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let logRemoved = self.logEntries[indexPath.row]
+            LogEntry.deleteLog(log:logRemoved)
+            refreshLogs()
+            
+        } 
+        else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+            print("not yet handled")
+        }
+    }
+    
+    func refreshLogs(){
+        self.logEntries = LogEntry.getLogEntriesFor(petID: pet.id)
+       logEntriesTableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+        
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

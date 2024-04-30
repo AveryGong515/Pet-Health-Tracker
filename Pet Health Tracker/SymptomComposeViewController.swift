@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogComposeViewController: UIViewController {
+class SymptomComposeViewController: UIViewController {
     
     var pet: Pet!
     var logType: String!
@@ -46,7 +46,7 @@ class LogComposeViewController: UIViewController {
         if let newSymptomText = newSymptom.text, let severity = severitySelected, !newSymptomText.isEmpty{
             // case 1: new symptom added AND severity selected
 //            print("here1")
-            let newLog = LogEntry(id: UUID().uuidString, logTitle: newSymptomText, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "")
+            let newLog = LogEntry(id: UUID().uuidString, logTitle: newSymptomText, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "", severity: severity, frequency: frequencyField.text ?? "")
             pet.symptomLogNames.append(newSymptomText.lowercased())
             pet.save()
             Pet.save(Pet.getPets(), forKey: Pet.petsKey)
@@ -59,7 +59,7 @@ class LogComposeViewController: UIViewController {
         if let symptomName = existingSymptomSelected, let severity = severitySelected {
 //            print("here2,\(symptomName)")
             // case 2: existing symptom AND severity selected
-            let newLog = LogEntry(id: UUID().uuidString, logTitle: symptomName, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "")
+            let newLog = LogEntry(id: UUID().uuidString, logTitle: symptomName, pet: pet, logType: LogType.symptom.rawValue, timeStamp: timeStamp.date, description: descriptionField.text ?? "", severity: severity, frequency: frequencyField.text ?? "")
                 newLog.save()
                 LogEntry.save(LogEntry.getLogEntries(), forKey: LogEntry.logEntryKey)
 //            dismiss(animated: true)
@@ -134,6 +134,7 @@ class LogComposeViewController: UIViewController {
         selectSymptom.setTitle(action.title, for: .normal)
         newSymptom.isHidden = false
         isNewSymptom = true
+//        if let symptomSelectedOrAdded = newSymptom.text {
 //        if let symptomSelectedOrAdded = newSymptom.text {
 //            print("symptom added: \(symptomSelectedOrAdded)")
 //        }

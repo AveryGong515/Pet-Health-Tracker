@@ -22,6 +22,8 @@ class PetProfileViewController: UIViewController {
     @IBOutlet weak var birthDateLabel: UITextField!
     @IBOutlet weak var profilePicture: UIImageView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configure(pet: pet)
@@ -68,6 +70,24 @@ class PetProfileViewController: UIViewController {
     }
     
     
+    func createEditProfileButtonMenu()->UIMenu{
+        let editNameOption = UIAction(title: "Edit Name", handler: editName)
+        let editWeightOption = UIAction(title: "Edit Weight", handler: editWeight)
+        return UIMenu(title:"choose field to edit", options:[.displayInline,.singleSelection], children: [editNameOption, editWeightOption])
+        
+    }
+    
+    func editName(action:UIAction){
+        performSegue(withIdentifier: "EditNameSegue", sender: nil)
+    }
+    
+    func editWeight(action:UIAction){
+        performSegue(withIdentifier: "EditWeightSegue", sender: nil)
+    }
+    
+    
+    
+    
     func calculateAge(birthDate: Date) -> String {
         let calendar = Calendar.current
         let currentDate = Date()
@@ -101,6 +121,7 @@ class PetProfileViewController: UIViewController {
             chooseLogTypeViewController.modalPresentationStyle = .fullScreen
             
         }
+        
     }
         
     @IBAction func didTapCreateLog(_ sender: Any) {
@@ -118,11 +139,20 @@ class PetProfileViewController: UIViewController {
             
             print("log entries saved: \(LogEntry.getLogEntriesFor(petID: pet.id))")
         }
+    
+    
+    @IBAction func unwindToPetProfileFromMeds(_ segue: UIStoryboardSegue){
+
+            print("success")
+        }
         
     
     
     
 
+    @IBAction func editProfile(_ sender: Any) {
+        
+    }
     
     
     

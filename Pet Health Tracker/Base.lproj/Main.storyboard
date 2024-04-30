@@ -682,7 +682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFo-Ta-wFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2213" y="663"/>
+            <point key="canvasLocation" x="2263" y="544"/>
         </scene>
         <!--Pet Profile View Controller-->
         <scene sceneID="3Xr-xq-r6c">
@@ -834,7 +834,7 @@
                                     <color key="baseForegroundColor" red="0.45092743899999999" green="0.5820027968" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="HaQ-g3-lr6" kind="showDetail" identifier="ViewAllLogsSegue" id="z56-4X-B7d"/>
+                                    <segue destination="HaQ-g3-lr6" kind="show" identifier="ViewAllLogsSegue" id="c5e-2N-1QJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -888,17 +888,16 @@
                         <outlet property="sexLabel" destination="xzg-Bs-6gq" id="Xz8-xL-GhI"/>
                         <outlet property="speciesLabel" destination="kPK-fq-FHy" id="Vh6-v6-pDA"/>
                         <outlet property="weightLabel" destination="TJk-dH-H4n" id="mTG-lM-p6q"/>
-                        <segue destination="gHh-c6-46W" kind="unwind" unwindAction="unwindToPetProfile:" id="bY8-Ha-WFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLA-m4-WmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2212.9770992366412" y="1277.4647887323945"/>
         </scene>
-        <!--Log Compose View Controller-->
+        <!--Symptom Compose View Controller-->
         <scene sceneID="m3V-TJ-czQ">
             <objects>
-                <viewController id="Gr1-IL-bui" customClass="LogComposeViewController" customModule="Pet_Health_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gr1-IL-bui" customClass="SymptomComposeViewController" customModule="Pet_Health_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SaF-2P-ONa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -976,7 +975,7 @@
                                 </constraints>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="Create New Log" id="tqG-Yy-NJM">
+                                    <navigationItem title="Log Symptom" id="tqG-Yy-NJM">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1MB-hM-d79">
                                             <color key="tintColor" systemColor="systemRedColor"/>
                                             <connections>
@@ -1033,23 +1032,243 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1X3-Aw-P4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="gHh-c6-46W" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4378" y="1287"/>
+            <point key="canvasLocation" x="4451" y="1308"/>
         </scene>
-        <!--View Controller-->
+        <!--Medication Compose View Controller-->
         <scene sceneID="zac-0I-7Nc">
             <objects>
-                <viewController id="aSr-dL-WDT" sceneMemberID="viewController">
+                <viewController id="aSr-dL-WDT" customClass="MedicationComposeViewController" customModule="Pet_Health_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KaS-5a-Z3y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jje-Rt-EbD">
+                                <rect key="frame" x="32" y="156" width="328" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ak2-RZ-map"/>
+                                </constraints>
+                                <color key="tintColor" red="0.24794069460000001" green="0.34885500089999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Choose medication">
+                                            <attributes>
+                                                <color key="NSColor" red="0.41831028460000003" green="0.58926451209999997" blue="0.88216131929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NZ-dt-pc6">
+                                <rect key="frame" x="32" y="346" width="328" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gNQ-4f-3jJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Choose dosage unit">
+                                            <attributes>
+                                                <color key="NSColor" red="0.4221285582" green="0.5892654061" blue="0.88214176889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new medication" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJd-tA-NUA">
+                                <rect key="frame" x="32" y="222" width="328" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter dosage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owZ-nd-S8d">
+                                <rect key="frame" x="32" y="285" width="328" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YV7-3P-05p">
+                                <rect key="frame" x="0.0" y="44" width="393" height="44"/>
+                                <color key="barTintColor" systemColor="tableBackgroundColor"/>
+                                <items>
+                                    <navigationItem title="Log Medication" id="Vr7-05-d3t">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="KDz-8T-fGt">
+                                            <color key="tintColor" red="0.89616871840000001" green="0.18798128410000001" blue="0.3035778885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="07r-R3-ChB" kind="unwind" unwindAction="unwindToPetProfileFromMeds:" id="W9c-lP-oSF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="XSG-2v-1Rh">
+                                            <color key="tintColor" red="0.4221285582" green="0.5892654061" blue="0.88214176889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="didTapSaveButton:" destination="aSr-dL-WDT" id="AxU-g3-YKK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-Dl-83Q">
+                                <rect key="frame" x="32" y="423" width="328" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-qX-xJ3">
+                                <rect key="frame" x="140" y="519" width="220" height="36"/>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dls-nO-Xxv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cQm-Dl-83Q" firstAttribute="trailing" secondItem="Vei-qX-xJ3" secondAttribute="trailing" id="2EX-Oc-RlT"/>
+                            <constraint firstItem="Jje-Rt-EbD" firstAttribute="leading" secondItem="KJd-tA-NUA" secondAttribute="leading" id="D0W-lZ-Eee"/>
+                            <constraint firstItem="3NZ-dt-pc6" firstAttribute="top" secondItem="owZ-nd-S8d" secondAttribute="bottom" constant="27" id="H9N-Yr-wHv"/>
+                            <constraint firstItem="Jje-Rt-EbD" firstAttribute="centerX" secondItem="YV7-3P-05p" secondAttribute="centerX" id="LSD-nD-866"/>
+                            <constraint firstItem="Vei-qX-xJ3" firstAttribute="leading" secondItem="dls-nO-Xxv" secondAttribute="leading" constant="140" id="SPu-SF-4XO"/>
+                            <constraint firstItem="Jje-Rt-EbD" firstAttribute="trailing" secondItem="KJd-tA-NUA" secondAttribute="trailing" id="UYF-Xn-G5b"/>
+                            <constraint firstItem="Jje-Rt-EbD" firstAttribute="centerX" secondItem="KaS-5a-Z3y" secondAttribute="centerX" id="VXo-rq-My8"/>
+                            <constraint firstItem="3NZ-dt-pc6" firstAttribute="leading" secondItem="cQm-Dl-83Q" secondAttribute="leading" id="Vdd-1p-j4n"/>
+                            <constraint firstItem="owZ-nd-S8d" firstAttribute="leading" secondItem="3NZ-dt-pc6" secondAttribute="leading" id="WDf-HM-eku"/>
+                            <constraint firstItem="owZ-nd-S8d" firstAttribute="top" secondItem="KJd-tA-NUA" secondAttribute="bottom" constant="29" id="Wzx-iH-a1W"/>
+                            <constraint firstItem="3NZ-dt-pc6" firstAttribute="trailing" secondItem="cQm-Dl-83Q" secondAttribute="trailing" id="ZFX-RJ-5ge"/>
+                            <constraint firstItem="KJd-tA-NUA" firstAttribute="leading" secondItem="owZ-nd-S8d" secondAttribute="leading" id="a0E-dj-Vnn"/>
+                            <constraint firstItem="KJd-tA-NUA" firstAttribute="top" secondItem="Jje-Rt-EbD" secondAttribute="bottom" constant="31" id="bOg-Hy-1FF"/>
+                            <constraint firstItem="Jje-Rt-EbD" firstAttribute="leading" secondItem="dls-nO-Xxv" secondAttribute="leading" constant="32" id="cBh-bL-9za"/>
+                            <constraint firstItem="Jje-Rt-EbD" firstAttribute="top" secondItem="YV7-3P-05p" secondAttribute="bottom" constant="68" id="cHz-4p-eL0"/>
+                            <constraint firstItem="cQm-Dl-83Q" firstAttribute="top" secondItem="3NZ-dt-pc6" secondAttribute="bottom" constant="42" id="hG2-od-FKu"/>
+                            <constraint firstItem="YV7-3P-05p" firstAttribute="leading" secondItem="dls-nO-Xxv" secondAttribute="leading" id="lHM-aU-Rnc"/>
+                            <constraint firstItem="KJd-tA-NUA" firstAttribute="trailing" secondItem="owZ-nd-S8d" secondAttribute="trailing" id="oZr-yk-Dd8"/>
+                            <constraint firstItem="Vei-qX-xJ3" firstAttribute="top" secondItem="cQm-Dl-83Q" secondAttribute="bottom" constant="62" id="t3m-jQ-edh"/>
+                            <constraint firstItem="YV7-3P-05p" firstAttribute="top" secondItem="dls-nO-Xxv" secondAttribute="top" constant="44" id="vS2-1y-gNh"/>
+                            <constraint firstItem="owZ-nd-S8d" firstAttribute="trailing" secondItem="3NZ-dt-pc6" secondAttribute="trailing" id="wYz-GA-dfO"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="mWi-a5-Jvx"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="chooseMedication" destination="Jje-Rt-EbD" id="wt8-pQ-qTO"/>
+                        <outlet property="descriptionField" destination="cQm-Dl-83Q" id="bKS-rX-ifD"/>
+                        <outlet property="dosage" destination="owZ-nd-S8d" id="kWE-ON-5YA"/>
+                        <outlet property="dosageUnit" destination="3NZ-dt-pc6" id="ZlH-Oh-VEG"/>
+                        <outlet property="newMed" destination="KJd-tA-NUA" id="fhc-iw-5zM"/>
+                        <outlet property="timeStamp" destination="Vei-qX-xJ3" id="ZNg-v3-pmr"/>
+                        <segue destination="07r-R3-ChB" kind="unwind" identifier="unwindToPetProfileFromMeds" unwindAction="unwindToPetProfileFromMeds:" id="eNQ-vs-bB0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ds2-P8-gxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="07r-R3-ChB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4430" y="2049"/>
+            <point key="canvasLocation" x="3681.679389312977" y="2102.816901408451"/>
+        </scene>
+        <!--Vaccine Log View Controller-->
+        <scene sceneID="vlQ-l7-dnE">
+            <objects>
+                <viewController id="4rE-dE-4VK" customClass="VaccineLogViewController" customModule="Pet_Health_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x8V-FN-eKg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzw-LZ-ycu">
+                                <rect key="frame" x="32" y="165" width="329" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cyQ-UE-cZp"/>
+                                </constraints>
+                                <color key="tintColor" red="0.24794069460000001" green="0.34885500089999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Choose Vaccination">
+                                            <attributes>
+                                                <color key="NSColor" red="0.021243736150000001" green="0.4784674048" blue="0.99970537420000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new vaccination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vKi-qP-Avt">
+                                <rect key="frame" x="32" y="239" width="328" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Serial number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMU-ZO-f5S">
+                                <rect key="frame" x="32" y="299" width="328" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sdJ-nf-8OX">
+                                <rect key="frame" x="32" y="359" width="328" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-72-rfb">
+                                <rect key="frame" x="140" y="428" width="220" height="36"/>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktI-Jz-4dY">
+                                <rect key="frame" x="0.0" y="44" width="393" height="56"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Log Vaccination" id="aGr-fL-XR5">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wRX-s9-RIw">
+                                            <color key="tintColor" red="1" green="0.2097610419" blue="0.33875082029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="t23-jt-WMs" kind="unwind" unwindAction="unwindToPetProfile:" id="Mto-M4-CiT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="TJc-FE-Q9Y">
+                                            <connections>
+                                                <action selector="didTapDoneButton:" destination="4rE-dE-4VK" id="Atb-17-nFK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="osB-hd-dTL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vKi-qP-Avt" firstAttribute="top" secondItem="uzw-LZ-ycu" secondAttribute="bottom" constant="39" id="0YN-cY-Mwe"/>
+                            <constraint firstItem="uzw-LZ-ycu" firstAttribute="leading" secondItem="vKi-qP-Avt" secondAttribute="leading" id="78R-2d-LwF"/>
+                            <constraint firstItem="vKi-qP-Avt" firstAttribute="centerX" secondItem="x8V-FN-eKg" secondAttribute="centerX" id="Ih7-bN-l39"/>
+                            <constraint firstItem="vKi-qP-Avt" firstAttribute="leading" secondItem="pMU-ZO-f5S" secondAttribute="leading" id="IjQ-Xc-Luk"/>
+                            <constraint firstItem="vKi-qP-Avt" firstAttribute="trailing" secondItem="pMU-ZO-f5S" secondAttribute="trailing" id="OLC-mD-lc6"/>
+                            <constraint firstItem="ktI-Jz-4dY" firstAttribute="centerX" secondItem="uzw-LZ-ycu" secondAttribute="centerX" id="Ph1-Se-TQz"/>
+                            <constraint firstItem="d8r-72-rfb" firstAttribute="top" secondItem="sdJ-nf-8OX" secondAttribute="bottom" constant="35" id="Ssr-Vg-Wo4"/>
+                            <constraint firstItem="uzw-LZ-ycu" firstAttribute="centerX" secondItem="vKi-qP-Avt" secondAttribute="centerX" id="YdB-9g-vhX"/>
+                            <constraint firstItem="d8r-72-rfb" firstAttribute="leading" secondItem="osB-hd-dTL" secondAttribute="leading" constant="140" id="Zrn-3K-PqY"/>
+                            <constraint firstItem="pMU-ZO-f5S" firstAttribute="top" secondItem="vKi-qP-Avt" secondAttribute="bottom" constant="26" id="bgg-fD-TkH"/>
+                            <constraint firstItem="pMU-ZO-f5S" firstAttribute="leading" secondItem="sdJ-nf-8OX" secondAttribute="leading" id="dcY-lO-NIL"/>
+                            <constraint firstItem="sdJ-nf-8OX" firstAttribute="top" secondItem="pMU-ZO-f5S" secondAttribute="bottom" constant="26" id="gxW-H1-ABC"/>
+                            <constraint firstItem="pMU-ZO-f5S" firstAttribute="trailing" secondItem="sdJ-nf-8OX" secondAttribute="trailing" id="iFT-gU-mWI"/>
+                            <constraint firstItem="uzw-LZ-ycu" firstAttribute="leading" secondItem="osB-hd-dTL" secondAttribute="leading" constant="32" id="oVp-oo-BaT"/>
+                            <constraint firstItem="ktI-Jz-4dY" firstAttribute="top" secondItem="osB-hd-dTL" secondAttribute="top" constant="44" id="qbL-eN-v2J"/>
+                            <constraint firstItem="ktI-Jz-4dY" firstAttribute="leading" secondItem="osB-hd-dTL" secondAttribute="leading" id="qqY-0a-JO7"/>
+                            <constraint firstItem="sdJ-nf-8OX" firstAttribute="trailing" secondItem="d8r-72-rfb" secondAttribute="trailing" id="sjO-vo-JCN"/>
+                            <constraint firstItem="uzw-LZ-ycu" firstAttribute="top" secondItem="ktI-Jz-4dY" secondAttribute="bottom" constant="65" id="yHX-E0-AkH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Elm-9d-s7h"/>
+                    <connections>
+                        <outlet property="chooseVaccineButton" destination="uzw-LZ-ycu" id="d94-vM-uUJ"/>
+                        <outlet property="descriptionField" destination="sdJ-nf-8OX" id="D7i-eD-UYF"/>
+                        <outlet property="newVaccineField" destination="vKi-qP-Avt" id="JLx-at-D7j"/>
+                        <outlet property="serialNumberField" destination="pMU-ZO-f5S" id="fvd-9S-scb"/>
+                        <outlet property="timeStamp" destination="d8r-72-rfb" id="Yyp-4V-ebl"/>
+                        <segue destination="t23-jt-WMs" kind="unwind" identifier="unwindToPetProfile" unwindAction="unwindToPetProfile:" id="DXf-Lf-ySG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGX-5e-eWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="t23-jt-WMs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4607" y="2103"/>
         </scene>
         <!--Choose Log Type View Controller-->
         <scene sceneID="p4R-FF-7So">
@@ -1109,7 +1328,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="aSr-dL-WDT" kind="show" id="e4J-hl-5YM"/>
+                                    <segue destination="aSr-dL-WDT" kind="show" identifier="CreateMedicationLogSegue" id="e4J-hl-5YM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGp-Qk-XuQ">
@@ -1131,6 +1350,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="4rE-dE-4VK" kind="show" identifier="CreateVaccineLogSegue" id="hof-NS-yTV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose type of log you wish to enter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra6-H8-Tlz">
                                 <rect key="frame" x="47" y="280" width="308" height="50"/>
@@ -1177,6 +1399,7 @@
                             <constraint firstItem="NqZ-mH-Wlt" firstAttribute="trailing" secondItem="Ra6-H8-Tlz" secondAttribute="trailing" constant="38" id="xdD-Ca-VCf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="caK-PH-uos"/>
                     <connections>
                         <outlet property="chooseMedicationLogType" destination="QJi-NM-sQP" id="mZD-pu-RaK"/>
                         <outlet property="chooseSymptomLogType" destination="vmD-yf-RF4" id="EEc-o9-9x0"/>
@@ -1377,6 +1600,68 @@
             </objects>
             <point key="canvasLocation" x="2965.6488549618321" y="2102.816901408451"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="LnZ-TV-TJY">
+            <objects>
+                <viewController id="6wp-Ml-Oi2" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="JpL-0a-6H4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter new weight for your pet:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-eZ-CJf">
+                                <rect key="frame" x="81" y="353" width="248" height="20"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new weight in lbs..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKq-Bz-pzz">
+                                <rect key="frame" x="61" y="406" width="286" height="34"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-iH-gjK">
+                                <rect key="frame" x="287" y="480" width="58" height="31"/>
+                                <color key="tintColor" systemColor="darkTextColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="AmericanTypewriter"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawprint.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ksd-lE-Dir">
+                                <rect key="frame" x="139" y="180" width="116" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray3Color"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1XZ-II-D4a"/>
+                        <color key="backgroundColor" red="0.30382391809999998" green="0.42715889219999997" blue="0.64280503990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dKq-Bz-pzz" firstAttribute="top" secondItem="dtV-eZ-CJf" secondAttribute="bottom" constant="33" id="2Ch-T8-d3t"/>
+                            <constraint firstItem="dtV-eZ-CJf" firstAttribute="leading" secondItem="1XZ-II-D4a" secondAttribute="leading" constant="81" id="3nO-re-oNM"/>
+                            <constraint firstItem="7q6-iH-gjK" firstAttribute="trailing" secondItem="dKq-Bz-pzz" secondAttribute="trailing" id="7Fa-1W-vUc"/>
+                            <constraint firstItem="dKq-Bz-pzz" firstAttribute="leading" secondItem="1XZ-II-D4a" secondAttribute="leading" constant="59" id="W2M-4t-llU"/>
+                            <constraint firstItem="7q6-iH-gjK" firstAttribute="top" secondItem="dKq-Bz-pzz" secondAttribute="bottom" constant="40" id="lQ4-9l-jN9"/>
+                            <constraint firstItem="1XZ-II-D4a" firstAttribute="trailing" secondItem="dKq-Bz-pzz" secondAttribute="trailing" constant="48" id="pB5-lW-V7G"/>
+                            <constraint firstItem="7q6-iH-gjK" firstAttribute="leading" secondItem="1XZ-II-D4a" secondAttribute="leading" constant="287" id="vrH-Et-rey"/>
+                            <constraint firstItem="dtV-eZ-CJf" firstAttribute="top" secondItem="1XZ-II-D4a" secondAttribute="top" constant="298" id="vrf-8E-2fU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="azO-IN-kdy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zr-VU-bif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3803.8167938931297" y="581.69014084507046"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background2" width="1500" height="841"/>
@@ -1388,20 +1673,32 @@
         <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <image name="square.and.pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="stethoscope.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="lightTextColor">
             <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

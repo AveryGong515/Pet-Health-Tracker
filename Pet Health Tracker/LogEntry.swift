@@ -17,7 +17,7 @@ struct LogEntry: Codable{
     var description: String
     // conditional fields depending on logType
     var severity: String? // symptom logType only
-    var frequency: Int? // symptom logType only
+    var frequency: String? // symptom logType only
     var dosage: Float? // medication logType only
     var dosageUnit: String? // medication logType only
     var serialID: String? // Note: this is for vaccination only
@@ -25,7 +25,7 @@ struct LogEntry: Codable{
     let id: String
     
     init(id: String, logTitle: String, pet: Pet, logType: String, timeStamp: Date, description: String,
-         severity: String? = nil, frequency: Int? = nil, dosage: Float? = nil, dosageUnit: String? = nil, serialID: String? = nil){
+         severity: String? = nil, frequency: String? = nil, dosage: Float? = nil, dosageUnit: String? = nil, serialID: String? = nil){
         self.id = id
         self.logTitle = logTitle
         self.pet = pet
@@ -99,6 +99,14 @@ extension LogEntry{
         let entriesForPet = logEntries.filter { $0.pet.id == petID }
         return entriesForPet
         
+    }
+    
+    static func deleteLog(log: LogEntry){
+        var logEntries = LogEntry.getLogEntries()
+        if let index = logEntries.firstIndex(where: {$0.id == log.id}){
+            logEntries.remove(at: index)
+            LogEntry.save(logEntries, forKey: LogEntry.logEntryKey)
+        }
     }
     
 

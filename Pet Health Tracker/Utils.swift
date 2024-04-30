@@ -19,6 +19,11 @@ struct Utils {
         return formatter.string(from: date)
     }
     
+    static func stringToFloat(str: String)->Float{
+        let flt = (str as NSString).floatValue
+        return flt
+    }
+    
     
     
     

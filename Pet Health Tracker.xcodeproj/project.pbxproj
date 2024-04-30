@@ -14,7 +14,7 @@
 		C17A243C2BD40814008AEE7C /* PetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243B2BD40814008AEE7C /* PetListViewController.swift */; };
 		C17A243E2BD4083C008AEE7C /* PetComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243D2BD4083C008AEE7C /* PetComposeViewController.swift */; };
 		C17A24402BD408B4008AEE7C /* PetProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A243F2BD408B4008AEE7C /* PetProfileViewController.swift */; };
-		C17A24422BD408DF008AEE7C /* LogComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24412BD408DF008AEE7C /* LogComposeViewController.swift */; };
+		C17A24422BD408DF008AEE7C /* SymptomComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24412BD408DF008AEE7C /* SymptomComposeViewController.swift */; };
 		C17A24442BD40935008AEE7C /* LogListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24432BD40935008AEE7C /* LogListViewController.swift */; };
 		C17A24462BD40A7C008AEE7C /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24452BD40A7C008AEE7C /* Pet.swift */; };
 		C17A244A2BD4121C008AEE7C /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A24492BD4121C008AEE7C /* PetCell.swift */; };
@@ -30,6 +30,8 @@
 		C1D703362BD34C2F00FC86F4 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D703352BD34C2F00FC86F4 /* Reminder.swift */; };
 		C1D7033A2BD354CC00FC86F4 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D703392BD354CC00FC86F4 /* ReminderListViewController.swift */; };
 		C1D7033C2BD3550C00FC86F4 /* ReminderComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D7033B2BD3550C00FC86F4 /* ReminderComposeViewController.swift */; };
+		C1DB8DAB2BDF22D4002F2F56 /* MedicationComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DB8DAA2BDF22D4002F2F56 /* MedicationComposeViewController.swift */; };
+		C1DB8DAD2BE08CF0002F2F56 /* VaccineLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DB8DAC2BE08CF0002F2F56 /* VaccineLogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,7 @@
 		C17A243B2BD40814008AEE7C /* PetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListViewController.swift; sourceTree = "<group>"; };
 		C17A243D2BD4083C008AEE7C /* PetComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetComposeViewController.swift; sourceTree = "<group>"; };
 		C17A243F2BD408B4008AEE7C /* PetProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileViewController.swift; sourceTree = "<group>"; };
-		C17A24412BD408DF008AEE7C /* LogComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogComposeViewController.swift; sourceTree = "<group>"; };
+		C17A24412BD408DF008AEE7C /* SymptomComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomComposeViewController.swift; sourceTree = "<group>"; };
 		C17A24432BD40935008AEE7C /* LogListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogListViewController.swift; sourceTree = "<group>"; };
 		C17A24452BD40A7C008AEE7C /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		C17A24492BD4121C008AEE7C /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
@@ -58,6 +60,8 @@
 		C1D703352BD34C2F00FC86F4 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		C1D703392BD354CC00FC86F4 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
 		C1D7033B2BD3550C00FC86F4 /* ReminderComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderComposeViewController.swift; sourceTree = "<group>"; };
+		C1DB8DAA2BDF22D4002F2F56 /* MedicationComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationComposeViewController.swift; sourceTree = "<group>"; };
+		C1DB8DAC2BE08CF0002F2F56 /* VaccineLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineLogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +98,13 @@
 				C1AD48E22BCF593900A9E31D /* SceneDelegate.swift */,
 				C1AD48E42BCF593900A9E31D /* ViewController.swift */,
 				C1AD48E62BCF593900A9E31D /* Main.storyboard */,
+				C1DB8DAC2BE08CF0002F2F56 /* VaccineLogViewController.swift */,
+				C1DB8DAA2BDF22D4002F2F56 /* MedicationComposeViewController.swift */,
 				C11919992BD75A870029A534 /* LogEntryDetailViewController.swift */,
 				C11919952BD6EE1D0029A534 /* ChooseLogTypeViewController.swift */,
 				C17A24432BD40935008AEE7C /* LogListViewController.swift */,
 				C11919972BD72BEC0029A534 /* LogEntryCell.swift */,
-				C17A24412BD408DF008AEE7C /* LogComposeViewController.swift */,
+				C17A24412BD408DF008AEE7C /* SymptomComposeViewController.swift */,
 				C17A243F2BD408B4008AEE7C /* PetProfileViewController.swift */,
 				C11919932BD6D0E70029A534 /* LogEntry.swift */,
 				C17A243D2BD4083C008AEE7C /* PetComposeViewController.swift */,
@@ -200,14 +206,16 @@
 				C17A24402BD408B4008AEE7C /* PetProfileViewController.swift in Sources */,
 				C1D703362BD34C2F00FC86F4 /* Reminder.swift in Sources */,
 				C17A244E2BD5FA81008AEE7C /* ReminderDetailViewController.swift in Sources */,
-				C17A24422BD408DF008AEE7C /* LogComposeViewController.swift in Sources */,
+				C17A24422BD408DF008AEE7C /* SymptomComposeViewController.swift in Sources */,
 				C17A243E2BD4083C008AEE7C /* PetComposeViewController.swift in Sources */,
+				C1DB8DAD2BE08CF0002F2F56 /* VaccineLogViewController.swift in Sources */,
 				C17A24442BD40935008AEE7C /* LogListViewController.swift in Sources */,
 				C17A244A2BD4121C008AEE7C /* PetCell.swift in Sources */,
 				C17A24462BD40A7C008AEE7C /* Pet.swift in Sources */,
 				C1AD48F72BCF616100A9E31D /* ReminderCell.swift in Sources */,
 				C11919982BD72BEC0029A534 /* LogEntryCell.swift in Sources */,
 				C11919942BD6D0E70029A534 /* LogEntry.swift in Sources */,
+				C1DB8DAB2BDF22D4002F2F56 /* MedicationComposeViewController.swift in Sources */,
 				C119199A2BD75A870029A534 /* LogEntryDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
