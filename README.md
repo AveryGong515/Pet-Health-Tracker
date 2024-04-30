@@ -5,7 +5,9 @@ Original App Design Project
 
 ***Unit 10 Final Update - Demo Video:*** https://youtu.be/_Dy9zVYdlhs
 
-Here is an updated gif:
+Here is an updated gif: 
+
+![](final-demo.gif)
 
 ***Unit 9 Milestone Update - Demo Video:*** https://youtu.be/LHknUrXSZLY
 
