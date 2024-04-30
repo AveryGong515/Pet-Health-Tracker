@@ -684,6 +684,85 @@
             </objects>
             <point key="canvasLocation" x="2263" y="544"/>
         </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="tum-CW-G9a">
+            <objects>
+                <viewController id="x56-c7-Ulw" customClass="EditProfileViewController" customModule="Pet_Health_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dd1-Dj-xSg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter new attribute for your pet:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cih-Fb-jix">
+                                <rect key="frame" x="43" y="435" width="250" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new attribute ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YO1-3M-hr5">
+                                <rect key="frame" x="43" y="461" width="323" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqf-vG-SwT">
+                                <rect key="frame" x="278" y="535" width="88" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="darkTextColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="AmericanTypewriter"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSaveButton:" destination="x56-c7-Ulw" eventType="touchUpInside" id="Bts-Lk-asH"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawprint.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-ci-WlX">
+                                <rect key="frame" x="127" y="176" width="155" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray3Color"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-yf-FhR">
+                                <rect key="frame" x="43" y="377" width="323" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.60774524009999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Choose Field To Edit">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="AmericanTypewriter"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yER-Py-VXU"/>
+                        <color key="backgroundColor" red="0.30382391809999998" green="0.42715889219999997" blue="0.64280503990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TRl-wM-4qn"/>
+                    <connections>
+                        <outlet property="chooseEditFieldButton" destination="dsd-yf-FhR" id="RFc-Sw-Dju"/>
+                        <outlet property="editFieldNewValue" destination="YO1-3M-hr5" id="je1-NL-REE"/>
+                        <outlet property="instruction" destination="cih-Fb-jix" id="1fQ-nO-PoL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNO-Vv-eLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306.1068702290077" y="559.85915492957747"/>
+        </scene>
         <!--Pet Profile View Controller-->
         <scene sceneID="3Xr-xq-r6c">
             <objects>
@@ -835,6 +914,17 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="HaQ-g3-lr6" kind="show" identifier="ViewAllLogsSegue" id="c5e-2N-1QJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROu-iJ-JUC">
+                                <rect key="frame" x="326" y="297" width="51" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.and.ellipsis.rectangle" catalog="system">
+                                    <attributedString key="attributedTitle"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="x56-c7-Ulw" kind="show" identifier="EditPetProfileSegue" id="VVo-Ca-tPr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1600,68 +1690,6 @@
             </objects>
             <point key="canvasLocation" x="2965.6488549618321" y="2102.816901408451"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="LnZ-TV-TJY">
-            <objects>
-                <viewController id="6wp-Ml-Oi2" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" contentMode="scaleToFill" id="JpL-0a-6H4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter new weight for your pet:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-eZ-CJf">
-                                <rect key="frame" x="81" y="353" width="248" height="20"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new weight in lbs..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKq-Bz-pzz">
-                                <rect key="frame" x="61" y="406" width="286" height="34"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-iH-gjK">
-                                <rect key="frame" x="287" y="480" width="58" height="31"/>
-                                <color key="tintColor" systemColor="darkTextColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Save">
-                                            <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="14" name="AmericanTypewriter"/>
-                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawprint.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ksd-lE-Dir">
-                                <rect key="frame" x="139" y="180" width="116" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemGray3Color"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="1XZ-II-D4a"/>
-                        <color key="backgroundColor" red="0.30382391809999998" green="0.42715889219999997" blue="0.64280503990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="dKq-Bz-pzz" firstAttribute="top" secondItem="dtV-eZ-CJf" secondAttribute="bottom" constant="33" id="2Ch-T8-d3t"/>
-                            <constraint firstItem="dtV-eZ-CJf" firstAttribute="leading" secondItem="1XZ-II-D4a" secondAttribute="leading" constant="81" id="3nO-re-oNM"/>
-                            <constraint firstItem="7q6-iH-gjK" firstAttribute="trailing" secondItem="dKq-Bz-pzz" secondAttribute="trailing" id="7Fa-1W-vUc"/>
-                            <constraint firstItem="dKq-Bz-pzz" firstAttribute="leading" secondItem="1XZ-II-D4a" secondAttribute="leading" constant="59" id="W2M-4t-llU"/>
-                            <constraint firstItem="7q6-iH-gjK" firstAttribute="top" secondItem="dKq-Bz-pzz" secondAttribute="bottom" constant="40" id="lQ4-9l-jN9"/>
-                            <constraint firstItem="1XZ-II-D4a" firstAttribute="trailing" secondItem="dKq-Bz-pzz" secondAttribute="trailing" constant="48" id="pB5-lW-V7G"/>
-                            <constraint firstItem="7q6-iH-gjK" firstAttribute="leading" secondItem="1XZ-II-D4a" secondAttribute="leading" constant="287" id="vrH-Et-rey"/>
-                            <constraint firstItem="dtV-eZ-CJf" firstAttribute="top" secondItem="1XZ-II-D4a" secondAttribute="top" constant="298" id="vrf-8E-2fU"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="azO-IN-kdy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5zr-VU-bif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3803.8167938931297" y="581.69014084507046"/>
-        </scene>
     </scenes>
     <resources>
         <image name="background2" width="1500" height="841"/>
@@ -1669,6 +1697,7 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="pawprint.circle.fill" catalog="system" width="128" height="123"/>
         <image name="pawprint.fill" catalog="system" width="128" height="112"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="128" height="86"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <image name="square.and.pencil.circle.fill" catalog="system" width="128" height="123"/>

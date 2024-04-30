@@ -32,6 +32,7 @@
 		C1D7033C2BD3550C00FC86F4 /* ReminderComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D7033B2BD3550C00FC86F4 /* ReminderComposeViewController.swift */; };
 		C1DB8DAB2BDF22D4002F2F56 /* MedicationComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DB8DAA2BDF22D4002F2F56 /* MedicationComposeViewController.swift */; };
 		C1DB8DAD2BE08CF0002F2F56 /* VaccineLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DB8DAC2BE08CF0002F2F56 /* VaccineLogViewController.swift */; };
+		C1DB8DAF2BE09993002F2F56 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DB8DAE2BE09993002F2F56 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		C1D7033B2BD3550C00FC86F4 /* ReminderComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderComposeViewController.swift; sourceTree = "<group>"; };
 		C1DB8DAA2BDF22D4002F2F56 /* MedicationComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationComposeViewController.swift; sourceTree = "<group>"; };
 		C1DB8DAC2BE08CF0002F2F56 /* VaccineLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineLogViewController.swift; sourceTree = "<group>"; };
+		C1DB8DAE2BE09993002F2F56 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				C1AD48E22BCF593900A9E31D /* SceneDelegate.swift */,
 				C1AD48E42BCF593900A9E31D /* ViewController.swift */,
 				C1AD48E62BCF593900A9E31D /* Main.storyboard */,
+				C1DB8DAE2BE09993002F2F56 /* EditProfileViewController.swift */,
 				C1DB8DAC2BE08CF0002F2F56 /* VaccineLogViewController.swift */,
 				C1DB8DAA2BDF22D4002F2F56 /* MedicationComposeViewController.swift */,
 				C11919992BD75A870029A534 /* LogEntryDetailViewController.swift */,
@@ -205,6 +208,7 @@
 				C1AD48E32BCF593900A9E31D /* SceneDelegate.swift in Sources */,
 				C17A24402BD408B4008AEE7C /* PetProfileViewController.swift in Sources */,
 				C1D703362BD34C2F00FC86F4 /* Reminder.swift in Sources */,
+				C1DB8DAF2BE09993002F2F56 /* EditProfileViewController.swift in Sources */,
 				C17A244E2BD5FA81008AEE7C /* ReminderDetailViewController.swift in Sources */,
 				C17A24422BD408DF008AEE7C /* SymptomComposeViewController.swift in Sources */,
 				C17A243E2BD4083C008AEE7C /* PetComposeViewController.swift in Sources */,

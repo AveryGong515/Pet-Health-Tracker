@@ -22,6 +22,7 @@ class PetProfileViewController: UIViewController {
     @IBOutlet weak var birthDateLabel: UITextField!
     @IBOutlet weak var profilePicture: UIImageView!
     
+    var onProfileChange: ((Pet) -> Void)? = nil
     
     
     override func viewDidLoad() {
@@ -122,6 +123,20 @@ class PetProfileViewController: UIViewController {
             
         }
         
+        if segue.identifier == "EditPetProfileSegue"{
+            print("HEREEEE")
+            guard let editProfileViewController = segue.destination as? EditProfileViewController  else {print("destination editProfileViewController is nil");return}
+            editProfileViewController.pet = pet
+            
+            editProfileViewController.onEditProfile = { [weak self] pet in
+                pet.save()
+                self?.refreshProfile()
+                
+            }
+            
+           
+        }
+        
     }
         
     @IBAction func didTapCreateLog(_ sender: Any) {
@@ -150,8 +165,10 @@ class PetProfileViewController: UIViewController {
     
     
 
-    @IBAction func editProfile(_ sender: Any) {
-        
+    private func refreshProfile() {
+        // 1.
+        self.pet = Pet.getPet(pet.id)
+        self.configure(pet: pet)
     }
     
     

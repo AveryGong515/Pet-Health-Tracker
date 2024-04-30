@@ -90,6 +90,12 @@ class PetListViewController: UIViewController, UITableViewDataSource, UITableVie
             let selectedPet = petList[selectedIndexPath.row]
             guard let petProfileViewController = segue.destination as? PetProfileViewController else {return}
             petProfileViewController.pet = selectedPet
+            petProfileViewController.onProfileChange = {[weak self] pet in
+                pet.save()
+                self?.refreshPets()
+                
+                
+            }
         }
         if segue.identifier == "ComposePetSegue"{
             if let petComposeViewController = segue.destination as? PetComposeViewController {
