@@ -3,6 +3,10 @@ Original App Design Project
 
 # Pet Health Tracker
 
+***Unit 10 Final Update - Demo Video:*** https://youtu.be/_Dy9zVYdlhs
+
+Here is an updated gif:
+
 ***Unit 9 Milestone Update - Demo Video:*** https://youtu.be/LHknUrXSZLY
 
  Here is a gif version, but please go to the youtube link for a higher quality and faster demo.
@@ -50,10 +54,10 @@ Pet Health Tracker is an app for keeping our furry friends healthy and happy. Cr
 
 **Required Must-have Stories**
 
-- [ ] User can login/sign up/log out
+
 - [x] User can add a new pet
 - [x] Yser can remove an existing pet
-- [ ] User can update pet profile, with ability to upload a profile picture
+- [x] User can update pet profile, with ability to upload a profile picture
 - [x] User can create events or reminders for pets
 - [x] User can view upcoming events or reminders on the dashboard
 - [x] User can view details of upcoming events or reminders
@@ -62,7 +66,8 @@ Pet Health Tracker is an app for keeping our furry friends healthy and happy. Cr
 
 
 **Optional Nice-to-have Stories**
-
+- [ ] User can login/sign up/log out
+- [ ] User can upload a profile picture
 - [ ] User can visualize symptom changes over selected period of time through data visualization graphs and plots
 - [ ] User can upload medical records of pet
 
