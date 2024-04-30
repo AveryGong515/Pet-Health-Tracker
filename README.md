@@ -3,6 +3,23 @@ Original App Design Project
 
 # Pet Health Tracker
 
+***Unit 9 Milestone Update - Demo Video:*** https://youtu.be/LHknUrXSZLY
+
+ Here is a gif version, but please go to the youtube link for a higher quality and faster demo.
+ 
+![](capstone-milestone-demo.gif)
+
+
+
+
+
+Tackled sprints this week:
+- Reminder scene with add, delete reminder for User's pets
+- Pet list scene with all pet's basic info displayed in TableView
+- Pet profile scene with the pet's specific info
+- Create log for specific pet; target is to support 3 types of log entries (symptom, medication, and vaccination), so far completed symptom logging
+- See all logs for specific pet
+
 ## Table of Contents
 
 1. [Overview](#Overview)
@@ -15,6 +32,7 @@ Original App Design Project
 ### Description
 
 Pet Health Tracker is an app for keeping our furry friends healthy and happy. Create reminders for vaccinations, medications, and check-ups. Track symptoms and health changes for pets with medical conditions. 
+
 
 ### App Evaluation
 
@@ -39,8 +57,8 @@ Pet Health Tracker is an app for keeping our furry friends healthy and happy. Cr
 - [x] User can create events or reminders for pets
 - [x] User can view upcoming events or reminders on the dashboard
 - [x] User can view details of upcoming events or reminders
-- [ ] User can create symptom watch trackers
-- [ ] User can create symptom watch tracker entries to log daily pet symptoms
+- [x] User can create symptom watch trackers
+- [x] User can create symptom watch tracker entries to log daily pet symptoms
 
 
 **Optional Nice-to-have Stories**
